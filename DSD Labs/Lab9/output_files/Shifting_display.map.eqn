@@ -1,0 +1,411 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--S is S
+S = INPUT();
+
+
+--HEX0[0] is HEX0[0]
+HEX0[0] = OUTPUT(D1L18);
+
+
+--HEX0[1] is HEX0[1]
+HEX0[1] = OUTPUT(D1L16);
+
+
+--HEX0[2] is HEX0[2]
+HEX0[2] = OUTPUT(D1L15);
+
+
+--HEX0[3] is HEX0[3]
+HEX0[3] = OUTPUT(D1L14);
+
+
+--HEX0[4] is HEX0[4]
+HEX0[4] = OUTPUT(D1L13);
+
+
+--HEX0[5] is HEX0[5]
+HEX0[5] = OUTPUT(D1L12);
+
+
+--HEX0[6] is HEX0[6]
+HEX0[6] = OUTPUT(D1L11);
+
+
+--HEX1[0] is HEX1[0]
+HEX1[0] = OUTPUT(D1L25);
+
+
+--HEX1[1] is HEX1[1]
+HEX1[1] = OUTPUT(D1L24);
+
+
+--HEX1[2] is HEX1[2]
+HEX1[2] = OUTPUT(D1L23);
+
+
+--HEX1[3] is HEX1[3]
+HEX1[3] = OUTPUT(D1L22);
+
+
+--HEX1[4] is HEX1[4]
+HEX1[4] = OUTPUT(D1L21);
+
+
+--HEX1[5] is HEX1[5]
+HEX1[5] = OUTPUT(D1L20);
+
+
+--HEX1[6] is HEX1[6]
+HEX1[6] = OUTPUT(D1L19);
+
+
+--HEX2[0] is HEX2[0]
+HEX2[0] = OUTPUT(D1L32);
+
+
+--HEX2[1] is HEX2[1]
+HEX2[1] = OUTPUT(D1L31);
+
+
+--HEX2[2] is HEX2[2]
+HEX2[2] = OUTPUT(D1L30);
+
+
+--HEX2[3] is HEX2[3]
+HEX2[3] = OUTPUT(D1L29);
+
+
+--HEX2[4] is HEX2[4]
+HEX2[4] = OUTPUT(D1L28);
+
+
+--HEX2[5] is HEX2[5]
+HEX2[5] = OUTPUT(D1L27);
+
+
+--HEX2[6] is HEX2[6]
+HEX2[6] = OUTPUT(D1L26);
+
+
+--HEX3[0] is HEX3[0]
+HEX3[0] = OUTPUT(D1L39);
+
+
+--HEX3[1] is HEX3[1]
+HEX3[1] = OUTPUT(D1L38);
+
+
+--HEX3[2] is HEX3[2]
+HEX3[2] = OUTPUT(D1L37);
+
+
+--HEX3[3] is HEX3[3]
+HEX3[3] = OUTPUT(D1L36);
+
+
+--HEX3[4] is HEX3[4]
+HEX3[4] = OUTPUT(D1L35);
+
+
+--HEX3[5] is HEX3[5]
+HEX3[5] = OUTPUT(D1L34);
+
+
+--HEX3[6] is HEX3[6]
+HEX3[6] = OUTPUT(D1L33);
+
+
+--HEX4[0] is HEX4[0]
+HEX4[0] = OUTPUT(D1L46);
+
+
+--HEX4[1] is HEX4[1]
+HEX4[1] = OUTPUT(D1L45);
+
+
+--HEX4[2] is HEX4[2]
+HEX4[2] = OUTPUT(D1L44);
+
+
+--HEX4[3] is HEX4[3]
+HEX4[3] = OUTPUT(D1L43);
+
+
+--HEX4[4] is HEX4[4]
+HEX4[4] = OUTPUT(D1L42);
+
+
+--HEX4[5] is HEX4[5]
+HEX4[5] = OUTPUT(D1L41);
+
+
+--HEX4[6] is HEX4[6]
+HEX4[6] = OUTPUT(D1L40);
+
+
+--HEX5[0] is HEX5[0]
+HEX5[0] = OUTPUT(D1L53);
+
+
+--HEX5[1] is HEX5[1]
+HEX5[1] = OUTPUT(D1L52);
+
+
+--HEX5[2] is HEX5[2]
+HEX5[2] = OUTPUT(D1L51);
+
+
+--HEX5[3] is HEX5[3]
+HEX5[3] = OUTPUT(D1L50);
+
+
+--HEX5[4] is HEX5[4]
+HEX5[4] = OUTPUT(D1L49);
+
+
+--HEX5[5] is HEX5[5]
+HEX5[5] = OUTPUT(D1L48);
+
+
+--HEX5[6] is HEX5[6]
+HEX5[6] = OUTPUT(D1L47);
+
+
+--D1_index[1] is Shifter:U3|index[1]
+--register power-up is low
+
+D1_index[1] = DFFEAS(D1L17, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--D1_index[0] is Shifter:U3|index[0]
+--register power-up is low
+
+D1_index[0] = DFFEAS(D1L4, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--D1_index[2] is Shifter:U3|index[2]
+--register power-up is low
+
+D1_index[2] = DFFEAS(D1L1, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--D1_index[4] is Shifter:U3|index[4]
+--register power-up is low
+
+D1_index[4] = DFFEAS(D1L9, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--D1_index[3] is Shifter:U3|index[3]
+--register power-up is low
+
+D1_index[3] = DFFEAS(D1L10, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--D1L18 is Shifter:U3|Mux6~0
+D1L18 = ( D1_index[3] & ( (!D1_index[4] & (!D1_index[1] $ (((!D1_index[0] & D1_index[2]))))) ) ) # ( !D1_index[3] & ( (!D1_index[2] & (!D1_index[4] $ (((D1_index[1] & !D1_index[0]))))) # (D1_index[2] & ((!D1_index[4] & (!D1_index[1])) # (D1_index[4] & ((D1_index[0]))))) ) );
+
+
+--D1L16 is Shifter:U3|Mux5~0
+D1L16 = ( D1_index[3] & ( (!D1_index[4] & (!D1_index[0] $ (D1_index[2]))) ) ) # ( !D1_index[3] & ( (!D1_index[4] & ((!D1_index[0] $ (!D1_index[2])) # (D1_index[1]))) # (D1_index[4] & ((!D1_index[1] $ (!D1_index[0])) # (D1_index[2]))) ) );
+
+
+--D1L15 is Shifter:U3|Mux4~0
+D1L15 = ( D1_index[3] & ( (!D1_index[4] & ((!D1_index[1] & ((!D1_index[2]) # (D1_index[0]))) # (D1_index[1] & (!D1_index[0] $ (!D1_index[2]))))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & ((!D1_index[0] $ (!D1_index[2])) # (D1_index[4]))) # (D1_index[1] & ((!D1_index[0] & ((!D1_index[2]) # (D1_index[4]))) # (D1_index[0] & ((!D1_index[4]) # (D1_index[2]))))) ) );
+
+
+--D1L14 is Shifter:U3|Mux3~0
+D1L14 = ( D1_index[3] & ( (!D1_index[4] & ((!D1_index[1] & ((!D1_index[2]) # (D1_index[0]))) # (D1_index[1] & (!D1_index[0] $ (!D1_index[2]))))) ) ) # ( !D1_index[3] & ( (!D1_index[0] & ((!D1_index[4] & (!D1_index[1])) # (D1_index[4] & ((!D1_index[2]))))) # (D1_index[0] & ((!D1_index[2] $ (D1_index[4])))) ) );
+
+
+--D1L13 is Shifter:U3|Mux2~0
+D1L13 = ( D1_index[2] & ( (D1_index[0] & ((!D1_index[4] & (!D1_index[1] & D1_index[3])) # (D1_index[4] & (D1_index[1] & !D1_index[3])))) ) ) # ( !D1_index[2] & ( (!D1_index[1] & (!D1_index[4] & (!D1_index[0]))) # (D1_index[1] & (!D1_index[3] & ((D1_index[0]) # (D1_index[4])))) ) );
+
+
+--D1L12 is Shifter:U3|Mux1~0
+D1L12 = ( D1_index[3] & ( (!D1_index[4] & (!D1_index[1] $ (((!D1_index[0] & D1_index[2]))))) ) ) # ( !D1_index[3] & ( (!D1_index[2] & (!D1_index[1] $ (((D1_index[4]) # (D1_index[0]))))) # (D1_index[2] & (((D1_index[0] & D1_index[4])))) ) );
+
+
+--D1L11 is Shifter:U3|Mux0~0
+D1L11 = ( D1_index[3] & ( (!D1_index[1] & (!D1_index[4] & (!D1_index[0] $ (D1_index[2])))) ) ) # ( !D1_index[3] & ( (!D1_index[4] & ((!D1_index[0] & (!D1_index[1])) # (D1_index[0] & ((!D1_index[2]))))) # (D1_index[4] & (D1_index[1] & (!D1_index[0] $ (D1_index[2])))) ) );
+
+
+--D1L25 is Shifter:U3|Mux13~0
+D1L25 = ( D1_index[3] & ( (!D1_index[0] & (!D1_index[1] & ((!D1_index[4])))) # (D1_index[0] & (D1_index[2] & (!D1_index[1] $ (D1_index[4])))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & (!D1_index[0] $ (((!D1_index[2] & D1_index[4]))))) # (D1_index[1] & (!D1_index[4] $ (((!D1_index[0] & D1_index[2]))))) ) );
+
+
+--D1L24 is Shifter:U3|Mux12~0
+D1L24 = ( D1_index[3] & ( (!D1_index[4] & ((!D1_index[0] & ((D1_index[2]))) # (D1_index[0] & (!D1_index[1] & !D1_index[2])))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & (((!D1_index[2]) # (D1_index[4])) # (D1_index[0]))) # (D1_index[1] & ((!D1_index[4]) # (!D1_index[0] $ (!D1_index[2])))) ) );
+
+
+--D1L23 is Shifter:U3|Mux11~0
+D1L23 = ( D1_index[3] & ( (!D1_index[4] & ((!D1_index[0] & ((!D1_index[1]) # (!D1_index[2]))) # (D1_index[0] & ((D1_index[2]))))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & (((!D1_index[2]) # (D1_index[4])))) # (D1_index[1] & ((!D1_index[4]) # (!D1_index[0] $ (!D1_index[2])))) ) );
+
+
+--D1L22 is Shifter:U3|Mux10~0
+D1L22 = ( D1_index[3] & ( (!D1_index[2] & (((!D1_index[0] & !D1_index[4])))) # (D1_index[2] & ((!D1_index[1] & ((!D1_index[4]))) # (D1_index[1] & (D1_index[0])))) ) ) # ( !D1_index[3] & ( (!D1_index[0] & ((!D1_index[2] $ (D1_index[4])))) # (D1_index[0] & ((!D1_index[1] & (!D1_index[2] & D1_index[4])) # (D1_index[1] & ((!D1_index[4]))))) ) );
+
+
+--D1L21 is Shifter:U3|Mux9~0
+D1L21 = ( D1_index[1] & ( (!D1_index[0] & (!D1_index[3] & ((!D1_index[2]) # (D1_index[4])))) # (D1_index[0] & (D1_index[2] & (!D1_index[4] $ (D1_index[3])))) ) ) # ( !D1_index[1] & ( (!D1_index[2] & (D1_index[4] & (D1_index[0] & !D1_index[3]))) # (D1_index[2] & (!D1_index[4] & (!D1_index[0] & D1_index[3]))) ) );
+
+
+--D1L20 is Shifter:U3|Mux8~0
+D1L20 = ( D1_index[2] & ( (!D1_index[4] & ((!D1_index[1] & ((D1_index[3]))) # (D1_index[1] & (D1_index[0] & !D1_index[3])))) # (D1_index[4] & ((!D1_index[0] & ((!D1_index[3]))) # (D1_index[0] & (D1_index[1] & D1_index[3])))) ) ) # ( !D1_index[2] & ( (!D1_index[4] & (!D1_index[0] & (!D1_index[1] $ (!D1_index[3])))) # (D1_index[4] & (!D1_index[3] & (!D1_index[1] $ (!D1_index[0])))) ) );
+
+
+--D1L19 is Shifter:U3|Mux7~0
+D1L19 = ( D1_index[4] & ( (!D1_index[1] & (D1_index[0] & (!D1_index[2] & !D1_index[3]))) # (D1_index[1] & (D1_index[2] & (!D1_index[0] $ (D1_index[3])))) ) ) # ( !D1_index[4] & ( (!D1_index[1] & (!D1_index[0] & (!D1_index[2] $ (D1_index[3])))) # (D1_index[1] & (!D1_index[3] & ((!D1_index[2]) # (D1_index[0])))) ) );
+
+
+--D1L32 is Shifter:U3|Mux20~0
+D1L32 = ( D1_index[3] & ( (!D1_index[0] & (D1_index[2] & (!D1_index[1] $ (D1_index[4])))) # (D1_index[0] & (D1_index[1] & (!D1_index[2] $ (D1_index[4])))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & ((!D1_index[0] & (!D1_index[2] & D1_index[4])) # (D1_index[0] & (!D1_index[2] $ (D1_index[4]))))) # (D1_index[1] & ((!D1_index[4]) # ((D1_index[0] & !D1_index[2])))) ) );
+
+
+--D1L31 is Shifter:U3|Mux19~0
+D1L31 = ( D1_index[3] & ( (!D1_index[1] & (!D1_index[4] & (!D1_index[0] $ (D1_index[2])))) # (D1_index[1] & (D1_index[0] & ((!D1_index[4]) # (D1_index[2])))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & ((!D1_index[0]) # ((!D1_index[4]) # (D1_index[2])))) # (D1_index[1] & ((!D1_index[4] & (!D1_index[0])) # (D1_index[4] & ((!D1_index[2]))))) ) );
+
+
+--D1L30 is Shifter:U3|Mux18~0
+D1L30 = ( D1_index[3] & ( (!D1_index[0] & (((D1_index[2] & !D1_index[4])))) # (D1_index[0] & ((!D1_index[2] & ((!D1_index[4]))) # (D1_index[2] & (D1_index[1])))) ) ) # ( !D1_index[3] & ( (!D1_index[2] & ((!D1_index[0]) # (!D1_index[1] $ (D1_index[4])))) # (D1_index[2] & ((!D1_index[1] & ((D1_index[4]) # (D1_index[0]))) # (D1_index[1] & ((!D1_index[4]))))) ) );
+
+
+--D1L29 is Shifter:U3|Mux17~0
+D1L29 = ( D1_index[3] & ( (!D1_index[4] & ((!D1_index[0] $ (!D1_index[2])))) # (D1_index[4] & (D1_index[1] & ((D1_index[2])))) ) ) # ( !D1_index[3] & ( (!D1_index[0] & ((!D1_index[1] & (!D1_index[2] & D1_index[4])) # (D1_index[1] & ((!D1_index[4]))))) # (D1_index[0] & (!D1_index[1] $ (!D1_index[2] $ (!D1_index[4])))) ) );
+
+
+--D1L28 is Shifter:U3|Mux16~0
+D1L28 = ( D1_index[1] & ( (!D1_index[2] & (!D1_index[4] & (D1_index[3] & D1_index[0]))) # (D1_index[2] & (!D1_index[0] & (!D1_index[4] $ (D1_index[3])))) ) ) # ( !D1_index[1] & ( (!D1_index[3] & ((!D1_index[4] & (!D1_index[2] & D1_index[0])) # (D1_index[4] & ((!D1_index[2]) # (D1_index[0]))))) ) );
+
+
+--D1L27 is Shifter:U3|Mux15~0
+D1L27 = ( D1_index[3] & ( (!D1_index[0] & (D1_index[2] & (!D1_index[1] $ (D1_index[4])))) # (D1_index[0] & (D1_index[1] & (!D1_index[2] & !D1_index[4]))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & ((!D1_index[0] & (!D1_index[2] & D1_index[4])) # (D1_index[0] & ((!D1_index[2]) # (D1_index[4]))))) # (D1_index[1] & ((!D1_index[2] & (D1_index[0] & D1_index[4])) # (D1_index[2] & ((!D1_index[4]))))) ) );
+
+
+--D1L26 is Shifter:U3|Mux14~0
+D1L26 = ( D1_index[3] & ( (D1_index[1] & ((!D1_index[2] & (D1_index[0] & !D1_index[4])) # (D1_index[2] & ((D1_index[4]))))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & ((!D1_index[0] & (!D1_index[2] & D1_index[4])) # (D1_index[0] & (!D1_index[2] $ (D1_index[4]))))) # (D1_index[1] & (!D1_index[0] & ((!D1_index[4])))) ) );
+
+
+--D1L39 is Shifter:U3|Mux27~0
+D1L39 = ( D1_index[3] & ( (!D1_index[1] & (D1_index[0] & (D1_index[2] & D1_index[4]))) # (D1_index[1] & (!D1_index[4] $ (((!D1_index[0] & D1_index[2]))))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & (!D1_index[4] $ (((!D1_index[0] & D1_index[2]))))) # (D1_index[1] & (!D1_index[0] & ((!D1_index[2]) # (!D1_index[4])))) ) );
+
+
+--D1L38 is Shifter:U3|Mux26~0
+D1L38 = ( D1_index[3] & ( (!D1_index[2] & (D1_index[1] & (!D1_index[0] & !D1_index[4]))) # (D1_index[2] & (((!D1_index[0] & !D1_index[4])) # (D1_index[1]))) ) ) # ( !D1_index[3] & ( (!D1_index[0] & (!D1_index[1] $ (((!D1_index[2] & D1_index[4]))))) # (D1_index[0] & ((!D1_index[2]) # ((!D1_index[4])))) ) );
+
+
+--D1L37 is Shifter:U3|Mux25~0
+D1L37 = ( D1_index[3] & ( (!D1_index[1] & (!D1_index[4] & (!D1_index[0] $ (D1_index[2])))) # (D1_index[1] & (((!D1_index[4]) # (D1_index[2])))) ) ) # ( !D1_index[3] & ( (!D1_index[4] & ((!D1_index[1]) # ((!D1_index[0] & D1_index[2])))) # (D1_index[4] & (!D1_index[2] $ (((!D1_index[0] & !D1_index[1]))))) ) );
+
+
+--D1L36 is Shifter:U3|Mux24~0
+D1L36 = ( D1_index[3] & ( (!D1_index[2] & (!D1_index[4] & ((!D1_index[0]) # (D1_index[1])))) # (D1_index[2] & (!D1_index[0] $ (((!D1_index[1]) # (!D1_index[4]))))) ) ) # ( !D1_index[3] & ( (!D1_index[0] & (!D1_index[2] $ (!D1_index[1] $ (!D1_index[4])))) # (D1_index[0] & (((!D1_index[1] & !D1_index[4])))) ) );
+
+
+--D1L35 is Shifter:U3|Mux23~0
+D1L35 = ( D1_index[3] & ( (!D1_index[1] & (D1_index[0] & (D1_index[2] & D1_index[4]))) # (D1_index[1] & (!D1_index[4] & (!D1_index[0] $ (D1_index[2])))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & (!D1_index[0] $ (((D1_index[2] & !D1_index[4]))))) ) );
+
+
+--D1L34 is Shifter:U3|Mux22~0
+D1L34 = ( D1_index[3] & ( (!D1_index[2] & (((D1_index[1] & !D1_index[4])))) # (D1_index[2] & (D1_index[0] & (!D1_index[1] $ (!D1_index[4])))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & (!D1_index[0] $ (((D1_index[2] & !D1_index[4]))))) # (D1_index[1] & (!D1_index[0] & (!D1_index[2] $ (!D1_index[4])))) ) );
+
+
+--D1L33 is Shifter:U3|Mux21~0
+D1L33 = ( D1_index[3] & ( (!D1_index[0] & (D1_index[1] & (!D1_index[2] $ (D1_index[4])))) # (D1_index[0] & (D1_index[2] & (!D1_index[1] $ (!D1_index[4])))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & (!D1_index[4] $ (((!D1_index[0] & D1_index[2]))))) ) );
+
+
+--D1L46 is Shifter:U3|Mux34~0
+D1L46 = ( D1_index[3] & ( (!D1_index[2] & (!D1_index[4] & (!D1_index[1] $ (!D1_index[0])))) # (D1_index[2] & (!D1_index[4] $ (((!D1_index[1]) # (D1_index[0]))))) ) ) # ( !D1_index[3] & ( (!D1_index[4] & (!D1_index[1])) # (D1_index[4] & (((D1_index[0] & !D1_index[2])))) ) );
+
+
+--D1L45 is Shifter:U3|Mux33~0
+D1L45 = ( D1_index[3] & ( (!D1_index[1] & (D1_index[0] & ((!D1_index[4]) # (D1_index[2])))) # (D1_index[1] & (!D1_index[2] $ (((!D1_index[0]) # (D1_index[4]))))) ) ) # ( !D1_index[3] & ( (!D1_index[4] & ((!D1_index[0]) # ((D1_index[1] & !D1_index[2])))) # (D1_index[4] & (((!D1_index[2])))) ) );
+
+
+--D1L44 is Shifter:U3|Mux32~0
+D1L44 = ( D1_index[3] & ( (!D1_index[4] & ((!D1_index[1] & ((D1_index[2]) # (D1_index[0]))) # (D1_index[1] & (!D1_index[0])))) # (D1_index[4] & (D1_index[2] & ((D1_index[0]) # (D1_index[1])))) ) ) # ( !D1_index[3] & ( (!D1_index[4] & ((!D1_index[1] & ((!D1_index[0]) # (D1_index[2]))) # (D1_index[1] & (D1_index[0])))) # (D1_index[4] & (((!D1_index[2])))) ) );
+
+
+--D1L43 is Shifter:U3|Mux31~0
+D1L43 = ( D1_index[3] & ( (!D1_index[4] & (!D1_index[0] $ (((!D1_index[1] & !D1_index[2]))))) # (D1_index[4] & (D1_index[2] & ((!D1_index[1]) # (D1_index[0])))) ) ) # ( !D1_index[3] & ( (!D1_index[0] & (!D1_index[1] & ((!D1_index[4])))) # (D1_index[0] & ((!D1_index[2] $ (!D1_index[4])))) ) );
+
+
+--D1L42 is Shifter:U3|Mux30~0
+D1L42 = ( D1_index[2] & ( (!D1_index[3] & (!D1_index[4] & (!D1_index[1] & !D1_index[0]))) # (D1_index[3] & (!D1_index[1] $ (((!D1_index[4]) # (D1_index[0]))))) ) ) # ( !D1_index[2] & ( (D1_index[0] & ((!D1_index[4] & (D1_index[3] & !D1_index[1])) # (D1_index[4] & (!D1_index[3] & D1_index[1])))) ) );
+
+
+--D1L41 is Shifter:U3|Mux29~0
+D1L41 = ( D1_index[3] & ( (!D1_index[2] & (!D1_index[4] & (!D1_index[1] $ (!D1_index[0])))) # (D1_index[2] & (!D1_index[1] $ (((!D1_index[4]) # (D1_index[0]))))) ) ) # ( !D1_index[3] & ( (!D1_index[2] & (((D1_index[0] & D1_index[4])))) # (D1_index[2] & (!D1_index[1] & ((!D1_index[4])))) ) );
+
+
+--D1L40 is Shifter:U3|Mux28~0
+D1L40 = ( D1_index[3] & ( (!D1_index[2] & (!D1_index[1] & (D1_index[0] & !D1_index[4]))) # (D1_index[2] & (!D1_index[4] $ (((!D1_index[1]) # (D1_index[0]))))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & (!D1_index[0] & ((!D1_index[4])))) # (D1_index[1] & (D1_index[0] & (!D1_index[2] & D1_index[4]))) ) );
+
+
+--D1L53 is Shifter:U3|Mux41~0
+D1L53 = ( D1_index[2] & ( (!D1_index[4] & (!D1_index[1] & (!D1_index[0] $ (D1_index[3])))) # (D1_index[4] & (D1_index[3] & ((!D1_index[0]) # (D1_index[1])))) ) ) # ( !D1_index[2] & ( (!D1_index[4] & (!D1_index[1] $ (((D1_index[0] & !D1_index[3]))))) # (D1_index[4] & ((!D1_index[0] & ((!D1_index[3]))) # (D1_index[0] & (D1_index[1] & D1_index[3])))) ) );
+
+
+--D1L52 is Shifter:U3|Mux40~0
+D1L52 = ( D1_index[2] & ( (!D1_index[1] & (((D1_index[0] & !D1_index[4])) # (D1_index[3]))) # (D1_index[1] & (D1_index[3] & ((D1_index[4]) # (D1_index[0])))) ) ) # ( !D1_index[2] & ( (!D1_index[0] & ((!D1_index[4] & ((D1_index[3]) # (D1_index[1]))) # (D1_index[4] & ((!D1_index[3]))))) # (D1_index[0] & (!D1_index[3] & ((!D1_index[1]) # (!D1_index[4])))) ) );
+
+
+--D1L51 is Shifter:U3|Mux39~0
+D1L51 = ( D1_index[2] & ( (!D1_index[0] & ((!D1_index[4] & ((!D1_index[1]) # (!D1_index[3]))) # (D1_index[4] & ((D1_index[3]))))) # (D1_index[0] & (((D1_index[3])))) ) ) # ( !D1_index[2] & ( (!D1_index[1] & ((!D1_index[4] $ (!D1_index[3])))) # (D1_index[1] & ((!D1_index[0] & ((!D1_index[3]))) # (D1_index[0] & (!D1_index[4])))) ) );
+
+
+--D1L50 is Shifter:U3|Mux38~0
+D1L50 = ( D1_index[4] & ( (!D1_index[0] & ((!D1_index[2] $ (D1_index[3])))) # (D1_index[0] & (D1_index[1] & ((D1_index[3])))) ) ) # ( !D1_index[4] & ( (!D1_index[1] & (!D1_index[3] $ (((!D1_index[2]) # (D1_index[0]))))) # (D1_index[1] & ((!D1_index[2] & (D1_index[0])) # (D1_index[2] & (!D1_index[0] & !D1_index[3])))) ) );
+
+
+--D1L49 is Shifter:U3|Mux37~0
+D1L49 = ( D1_index[3] & ( (!D1_index[1] & (!D1_index[4] & (!D1_index[0] $ (D1_index[2])))) # (D1_index[1] & ((!D1_index[0] & (D1_index[2])) # (D1_index[0] & (!D1_index[2] & D1_index[4])))) ) ) # ( !D1_index[3] & ( (D1_index[1] & (!D1_index[2] & (!D1_index[0] $ (!D1_index[4])))) ) );
+
+
+--D1L48 is Shifter:U3|Mux36~0
+D1L48 = ( D1_index[3] & ( (!D1_index[4] & (!D1_index[1] $ (((!D1_index[0] & D1_index[2]))))) # (D1_index[4] & (D1_index[1] & (!D1_index[0] $ (!D1_index[2])))) ) ) # ( !D1_index[3] & ( (!D1_index[1] & (!D1_index[0] & (!D1_index[2] $ (!D1_index[4])))) # (D1_index[1] & (!D1_index[2] & (!D1_index[0] $ (!D1_index[4])))) ) );
+
+
+--D1L47 is Shifter:U3|Mux35~0
+D1L47 = ( D1_index[4] & ( (!D1_index[1] & (D1_index[2] & (!D1_index[0] & D1_index[3]))) # (D1_index[1] & (!D1_index[3] $ (((D1_index[0]) # (D1_index[2]))))) ) ) # ( !D1_index[4] & ( (!D1_index[1] & (D1_index[3] & (!D1_index[2] $ (D1_index[0])))) # (D1_index[1] & (!D1_index[2] & (D1_index[0] & !D1_index[3]))) ) );
+
+
+--D1L17 is Shifter:U3|Mux5~1
+D1L17 = !D1_index[1] $ (!D1_index[0]);
+
+
+--clk is clk
+clk = INPUT();
+
+
+--reset_n is reset_n
+reset_n = INPUT();
+
+
+--D1L1 is Shifter:U3|Add0~0
+D1L1 = !D1_index[2] $ (((!D1_index[1]) # (!D1_index[0])));
+
+
+--D1L9 is Shifter:U3|index~0
+D1L9 = ( D1_index[3] & ( !D1_index[4] $ (((!D1_index[1]) # ((!D1_index[0]) # (!D1_index[2])))) ) ) # ( !D1_index[3] & ( (D1_index[4] & ((!D1_index[1]) # ((!D1_index[0]) # (!D1_index[2])))) ) );
+
+
+--D1L10 is Shifter:U3|index~1
+D1L10 = ( D1_index[3] & ( (!D1_index[1]) # ((!D1_index[0]) # (!D1_index[2])) ) ) # ( !D1_index[3] & ( (D1_index[1] & (D1_index[0] & (D1_index[2] & !D1_index[4]))) ) );
+
+
+--D1L4 is Shifter:U3|index[0]~2
+D1L4 = !D1_index[0];
+
+

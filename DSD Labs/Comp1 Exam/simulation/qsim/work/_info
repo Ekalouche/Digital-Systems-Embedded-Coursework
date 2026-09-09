@@ -1,0 +1,108 @@
+m255
+K4
+z2
+!s11e vcom 2019.2 2019.04, Apr 17 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dS:/CPET_DSD_LAB/Comp1 Exam/simulation/qsim
+T_opt
+Z1 !s110 1759877469
+VBP3h3n3C@f3^zOi7417Cz2
+04 21 14 work comp1exam_vhd_vec_tst comp1exam_arch 1
+=1-b07b251b0693-68e5995d-2ca-3ff4
+o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2019.2;69
+Ecomp1exam
+Z2 w1759877467
+Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z4 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 Y`9V05GdI;MMnoH[:2Jhb0
+Z5 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z6 DPx8 cyclonev 19 cyclonev_components 0 22 YY0j`BJ:kSE=:gJ7bIkV60
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 nAoKSOa;D;jz990:;R98f1
+R0
+Z10 8Comp1Exam.vho
+Z11 FComp1Exam.vho
+l0
+L36
+VI2ZJ<EZ:TQY0BaR0ceQ^h1
+!s100 ^_G[6[YH@aDVUb5L3Wd983
+Z12 OL;C;2019.2;69
+32
+R1
+!i10b 1
+Z13 !s108 1759877468.000000
+Z14 !s90 -work|work|Comp1Exam.vho|
+Z15 !s107 Comp1Exam.vho|
+!i113 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 9 comp1exam 0 22 I2ZJ<EZ:TQY0BaR0ceQ^h1
+l75
+L52
+VoHlLbdMgoB>dgD1JC@e7N0
+!s100 >?M]N>Z048D:f[_Vei3og1
+R12
+32
+R1
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Ecomp1exam_vhd_vec_tst
+Z18 w1759877465
+R7
+R8
+R0
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
+l0
+L31
+VjldzY<]U0P=LVE^c]d7eF2
+!s100 bagVPTJDVceke2GiOKIS72
+R12
+32
+R1
+!i10b 1
+Z21 !s108 1759877469.000000
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
+!i113 0
+R16
+R17
+Acomp1exam_arch
+R7
+R8
+DEx4 work 21 comp1exam_vhd_vec_tst 0 22 jldzY<]U0P=LVE^c]d7eF2
+l48
+L33
+VW8kS6f3A3]hiD9e`6iZP91
+!s100 LmRK]50@iQ=EBSYM1PT`N1
+R12
+32
+R1
+!i10b 1
+R21
+R22
+R23
+!i113 0
+R16
+R17

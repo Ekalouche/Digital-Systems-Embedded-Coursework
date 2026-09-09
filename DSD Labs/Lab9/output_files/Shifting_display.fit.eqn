@@ -1,0 +1,617 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--E1_index[1] is Shifter:U3|index[1] at FF_X88_Y8_N22
+--register power-up is low
+
+E1_index[1] = DFFEAS(E1L21, GLOBAL(A1L4), A1L96,  ,  ,  ,  ,  ,  );
+
+
+--E1_index[0] is Shifter:U3|index[0] at FF_X88_Y8_N52
+--register power-up is low
+
+E1_index[0] = DFFEAS(E1L4, GLOBAL(A1L4), A1L96,  ,  ,  ,  ,  ,  );
+
+
+--E1_index[2] is Shifter:U3|index[2] at FF_X88_Y8_N25
+--register power-up is low
+
+E1_index[2] = DFFEAS(E1L1, GLOBAL(A1L4), A1L96,  ,  ,  ,  ,  ,  );
+
+
+--E1_index[4] is Shifter:U3|index[4] at FF_X88_Y8_N59
+--register power-up is low
+
+E1_index[4] = DFFEAS(E1L13, GLOBAL(A1L4), A1L96,  ,  ,  ,  ,  ,  );
+
+
+--E1_index[3] is Shifter:U3|index[3] at FF_X88_Y8_N49
+--register power-up is low
+
+E1_index[3] = DFFEAS(E1L14, GLOBAL(A1L4), A1L96,  ,  ,  ,  ,  ,  );
+
+
+--E1L22 is Shifter:U3|Mux6~0 at MLABCELL_X72_Y2_N0
+E1L22 = ( E1L11Q & ( (!E1_index[4] & (!E1L7Q $ (((!E1L5Q & E1L9Q))))) ) ) # ( !E1L11Q & ( (!E1L9Q & (!E1_index[4] $ (((!E1L5Q & E1L7Q))))) # (E1L9Q & ((!E1_index[4] & ((!E1L7Q))) # (E1_index[4] & (E1L5Q)))) ) );
+
+
+--E1L20 is Shifter:U3|Mux5~0 at MLABCELL_X72_Y2_N6
+E1L20 = ( E1L11Q & ( (!E1_index[4] & (!E1L9Q $ (E1L5Q))) ) ) # ( !E1L11Q & ( (!E1_index[4] & ((!E1L9Q $ (!E1L5Q)) # (E1L7Q))) # (E1_index[4] & ((!E1L7Q $ (!E1L5Q)) # (E1L9Q))) ) );
+
+
+--E1L19 is Shifter:U3|Mux4~0 at LABCELL_X88_Y8_N18
+E1L19 = ( E1_index[1] & ( (!E1_index[0] & (!E1L11Q $ (((E1L9Q & !E1_index[4]))))) # (E1_index[0] & ((!E1L9Q & ((!E1_index[4]))) # (E1L9Q & (!E1L11Q)))) ) ) # ( !E1_index[1] & ( (!E1L11Q & ((!E1_index[0] $ (!E1L9Q)) # (E1_index[4]))) # (E1L11Q & (!E1_index[4] & ((!E1L9Q) # (E1_index[0])))) ) );
+
+
+--E1L18 is Shifter:U3|Mux3~0 at LABCELL_X88_Y8_N12
+E1L18 = ( E1L11Q & ( (!E1_index[4] & ((!E1_index[1] & ((!E1L9Q) # (E1_index[0]))) # (E1_index[1] & (!E1_index[0] $ (!E1L9Q))))) ) ) # ( !E1L11Q & ( (!E1_index[4] & ((!E1_index[0] & (!E1_index[1])) # (E1_index[0] & ((!E1L9Q))))) # (E1_index[4] & ((!E1_index[0] $ (E1L9Q)))) ) );
+
+
+--E1L17 is Shifter:U3|Mux2~0 at LABCELL_X88_Y8_N15
+E1L17 = ( E1L11Q & ( (!E1_index[4] & (!E1_index[1] & (!E1_index[0] $ (E1L9Q)))) ) ) # ( !E1L11Q & ( (!E1_index[4] & (!E1L9Q & (!E1_index[1] $ (E1_index[0])))) # (E1_index[4] & (E1_index[1] & ((!E1L9Q) # (E1_index[0])))) ) );
+
+
+--E1L16 is Shifter:U3|Mux1~0 at MLABCELL_X72_Y2_N3
+E1L16 = ( E1L11Q & ( (!E1_index[4] & (!E1L7Q $ (((!E1L5Q & E1L9Q))))) ) ) # ( !E1L11Q & ( (!E1L9Q & (!E1L7Q $ (((E1L5Q) # (E1_index[4]))))) # (E1L9Q & (E1_index[4] & (E1L5Q))) ) );
+
+
+--E1L15 is Shifter:U3|Mux0~0 at LABCELL_X88_Y37_N39
+E1L15 = ( E1L9Q & ( E1L7Q & ( (!E1L11Q & (E1L5Q & E1_index[4])) ) ) ) # ( !E1L9Q & ( E1L7Q & ( (!E1L11Q & (!E1L5Q $ (!E1_index[4]))) ) ) ) # ( E1L9Q & ( !E1L7Q & ( (!E1_index[4] & (!E1L11Q $ (E1L5Q))) ) ) ) # ( !E1L9Q & ( !E1L7Q & ( (!E1_index[4] & ((!E1L11Q) # (!E1L5Q))) ) ) );
+
+
+--E1L29 is Shifter:U3|Mux13~0 at MLABCELL_X72_Y2_N12
+E1L29 = ( E1L11Q & ( (!E1L5Q & (!E1L7Q & (!E1_index[4]))) # (E1L5Q & (E1L9Q & (!E1L7Q $ (E1_index[4])))) ) ) # ( !E1L11Q & ( (!E1L7Q & (!E1L5Q $ (((E1_index[4] & !E1L9Q))))) # (E1L7Q & (!E1_index[4] $ (((!E1L5Q & E1L9Q))))) ) );
+
+
+--E1L28 is Shifter:U3|Mux12~0 at MLABCELL_X72_Y2_N15
+E1L28 = ( E1L11Q & ( (!E1_index[4] & ((!E1L5Q & ((E1L9Q))) # (E1L5Q & (!E1L7Q & !E1L9Q)))) ) ) # ( !E1L11Q & ( (!E1L7Q & (((!E1L9Q) # (E1_index[4])) # (E1L5Q))) # (E1L7Q & ((!E1_index[4]) # (!E1L5Q $ (!E1L9Q)))) ) );
+
+
+--E1L27 is Shifter:U3|Mux11~0 at MLABCELL_X72_Y2_N42
+E1L27 = ( E1L11Q & ( (!E1_index[4] & ((!E1L9Q & ((!E1L5Q))) # (E1L9Q & ((!E1L7Q) # (E1L5Q))))) ) ) # ( !E1L11Q & ( (!E1L7Q & ((!E1L9Q) # ((E1_index[4])))) # (E1L7Q & ((!E1_index[4]) # (!E1L9Q $ (!E1L5Q)))) ) );
+
+
+--E1L26 is Shifter:U3|Mux10~0 at LABCELL_X88_Y8_N27
+E1L26 = ( E1L9Q & ( (!E1_index[1] & ((!E1_index[3] & (!E1_index[0] & E1_index[4])) # (E1_index[3] & ((!E1_index[4]))))) # (E1_index[1] & (!E1_index[0] $ (((!E1_index[4]) # (E1_index[3]))))) ) ) # ( !E1L9Q & ( (!E1_index[0] & (((!E1_index[4])))) # (E1_index[0] & (!E1_index[3] & (!E1_index[1] $ (!E1_index[4])))) ) );
+
+
+--E1L25 is Shifter:U3|Mux9~0 at MLABCELL_X72_Y2_N45
+E1L25 = ( E1L11Q & ( (E1L9Q & ((!E1L7Q & (!E1L5Q & !E1_index[4])) # (E1L7Q & (E1L5Q & E1_index[4])))) ) ) # ( !E1L11Q & ( (!E1L7Q & (!E1L9Q & (E1L5Q & E1_index[4]))) # (E1L7Q & (!E1L5Q $ (((E1L9Q & !E1_index[4]))))) ) );
+
+
+--E1L24 is Shifter:U3|Mux8~0 at MLABCELL_X72_Y2_N51
+E1L24 = ( E1L11Q & ( (!E1L5Q & (!E1L7Q & ((!E1_index[4])))) # (E1L5Q & (E1L9Q & (!E1L7Q $ (E1_index[4])))) ) ) # ( !E1L11Q & ( (!E1L7Q & (E1_index[4] & (!E1L5Q $ (!E1L9Q)))) # (E1L7Q & (!E1L5Q $ (((E1L9Q & !E1_index[4]))))) ) );
+
+
+--E1L23 is Shifter:U3|Mux7~0 at MLABCELL_X72_Y2_N30
+E1L23 = ( E1L11Q & ( (E1L9Q & ((!E1L7Q & (!E1L5Q & !E1_index[4])) # (E1L7Q & (E1L5Q & E1_index[4])))) ) ) # ( !E1L11Q & ( (!E1L7Q & (!E1L9Q & (!E1L5Q $ (E1_index[4])))) # (E1L7Q & (!E1_index[4] $ (((!E1L5Q & E1L9Q))))) ) );
+
+
+--E1L36 is Shifter:U3|Mux20~0 at MLABCELL_X72_Y2_N33
+E1L36 = ( E1L11Q & ( (!E1L5Q & (E1L9Q & (!E1L7Q $ (E1_index[4])))) # (E1L5Q & (E1L7Q & (!E1L9Q $ (E1_index[4])))) ) ) # ( !E1L11Q & ( (!E1L7Q & ((!E1L5Q & (!E1L9Q & E1_index[4])) # (E1L5Q & (!E1L9Q $ (E1_index[4]))))) # (E1L7Q & ((!E1_index[4]) # ((E1L5Q & !E1L9Q)))) ) );
+
+
+--E1L35 is Shifter:U3|Mux19~0 at MLABCELL_X72_Y2_N48
+E1L35 = ( E1L11Q & ( (!E1L7Q & (!E1_index[4] & (!E1L5Q $ (E1L9Q)))) # (E1L7Q & (E1L5Q & ((!E1_index[4]) # (E1L9Q)))) ) ) # ( !E1L11Q & ( (!E1L7Q & ((!E1L5Q) # ((!E1_index[4]) # (E1L9Q)))) # (E1L7Q & ((!E1_index[4] & (!E1L5Q)) # (E1_index[4] & ((!E1L9Q))))) ) );
+
+
+--E1L34 is Shifter:U3|Mux18~0 at LABCELL_X88_Y8_N45
+E1L34 = ( E1L11Q & ( (!E1L9Q & (((E1_index[0] & !E1_index[4])))) # (E1L9Q & ((!E1_index[0] & ((!E1_index[4]))) # (E1_index[0] & (E1_index[1])))) ) ) # ( !E1L11Q & ( (!E1L9Q & ((!E1_index[0]) # (!E1_index[1] $ (E1_index[4])))) # (E1L9Q & ((!E1_index[1] & ((E1_index[4]) # (E1_index[0]))) # (E1_index[1] & ((!E1_index[4]))))) ) );
+
+
+--E1L33 is Shifter:U3|Mux17~0 at LABCELL_X88_Y8_N0
+E1L33 = ( E1L11Q & ( (!E1_index[4] & (!E1L9Q $ (((!E1_index[0]))))) # (E1_index[4] & (E1L9Q & (E1_index[1]))) ) ) # ( !E1L11Q & ( (!E1L9Q & (!E1_index[1] $ (!E1_index[0] $ (E1_index[4])))) # (E1L9Q & ((!E1_index[1] & (E1_index[0] & E1_index[4])) # (E1_index[1] & ((!E1_index[4]))))) ) );
+
+
+--E1L32 is Shifter:U3|Mux16~0 at LABCELL_X88_Y8_N3
+E1L32 = ( E1L11Q & ( (E1_index[1] & ((!E1L9Q & (E1_index[0] & !E1_index[4])) # (E1L9Q & (!E1_index[0] & E1_index[4])))) ) ) # ( !E1L11Q & ( (!E1L9Q & (!E1_index[1] & ((E1_index[4]) # (E1_index[0])))) # (E1L9Q & ((!E1_index[1] & (E1_index[0] & E1_index[4])) # (E1_index[1] & (!E1_index[0] & !E1_index[4])))) ) );
+
+
+--E1L31 is Shifter:U3|Mux15~0 at LABCELL_X88_Y8_N36
+E1L31 = ( E1L11Q & ( (!E1L9Q & (E1_index[1] & (E1_index[0] & !E1_index[4]))) # (E1L9Q & (!E1_index[0] & (!E1_index[1] $ (E1_index[4])))) ) ) # ( !E1L11Q & ( (!E1L9Q & ((!E1_index[1] & ((E1_index[4]) # (E1_index[0]))) # (E1_index[1] & (E1_index[0] & E1_index[4])))) # (E1L9Q & ((!E1_index[1] & (E1_index[0] & E1_index[4])) # (E1_index[1] & ((!E1_index[4]))))) ) );
+
+
+--E1L30 is Shifter:U3|Mux14~0 at MLABCELL_X72_Y2_N24
+E1L30 = ( E1L11Q & ( (E1L7Q & ((!E1L9Q & (!E1_index[4] & E1L5Q)) # (E1L9Q & (E1_index[4])))) ) ) # ( !E1L11Q & ( (!E1L7Q & ((!E1L9Q & (!E1_index[4] $ (!E1L5Q))) # (E1L9Q & (E1_index[4] & E1L5Q)))) # (E1L7Q & (((!E1_index[4] & !E1L5Q)))) ) );
+
+
+--E1L43 is Shifter:U3|Mux27~0 at MLABCELL_X72_Y2_N27
+E1L43 = ( E1L11Q & ( (!E1L7Q & (E1L9Q & (E1L5Q & E1_index[4]))) # (E1L7Q & (!E1_index[4] $ (((E1L9Q & !E1L5Q))))) ) ) # ( !E1L11Q & ( (!E1L7Q & (!E1_index[4] $ (((E1L9Q & !E1L5Q))))) # (E1L7Q & (!E1L5Q & ((!E1L9Q) # (!E1_index[4])))) ) );
+
+
+--E1L42 is Shifter:U3|Mux26~0 at LABCELL_X88_Y37_N42
+E1L42 = ( E1L9Q & ( E1L7Q & ( ((!E1_index[4] & E1L5Q)) # (E1L11Q) ) ) ) # ( !E1L9Q & ( E1L7Q & ( !E1L11Q $ (((!E1_index[4] & !E1L5Q))) ) ) ) # ( E1L9Q & ( !E1L7Q & ( (!E1_index[4] & ((!E1L11Q) # (!E1L5Q))) # (E1_index[4] & (!E1L11Q & !E1L5Q)) ) ) ) # ( !E1L9Q & ( !E1L7Q & ( (!E1L11Q & ((!E1_index[4]) # (E1L5Q))) ) ) );
+
+
+--E1L41 is Shifter:U3|Mux25~0 at MLABCELL_X72_Y2_N9
+E1L41 = ( E1L11Q & ( (!E1L7Q & (!E1_index[4] & (!E1L9Q $ (E1L5Q)))) # (E1L7Q & (((!E1_index[4])) # (E1L9Q))) ) ) # ( !E1L11Q & ( (!E1_index[4] & ((!E1L7Q) # ((E1L9Q & !E1L5Q)))) # (E1_index[4] & (!E1L9Q $ (((!E1L7Q & !E1L5Q))))) ) );
+
+
+--E1L40 is Shifter:U3|Mux24~0 at LABCELL_X88_Y37_N3
+E1L40 = ( E1L9Q & ( E1L7Q & ( (!E1L11Q & (!E1L5Q & !E1_index[4])) # (E1L11Q & (!E1L5Q $ (!E1_index[4]))) ) ) ) # ( !E1L9Q & ( E1L7Q & ( (!E1L11Q & (!E1L5Q & E1_index[4])) # (E1L11Q & ((!E1_index[4]))) ) ) ) # ( E1L9Q & ( !E1L7Q & ( !E1L5Q $ (((!E1_index[4]) # (E1L11Q))) ) ) ) # ( !E1L9Q & ( !E1L7Q & ( (!E1_index[4] & ((!E1L11Q) # (!E1L5Q))) ) ) );
+
+
+--E1L39 is Shifter:U3|Mux23~0 at MLABCELL_X72_Y2_N18
+E1L39 = ( E1L11Q & ( (!E1L7Q & (E1L5Q & (E1_index[4] & E1L9Q))) # (E1L7Q & (!E1_index[4] & (!E1L5Q $ (E1L9Q)))) ) ) # ( !E1L11Q & ( (!E1L7Q & (!E1L5Q $ (((!E1_index[4] & E1L9Q))))) ) );
+
+
+--E1L38 is Shifter:U3|Mux22~0 at LABCELL_X88_Y8_N39
+E1L38 = ( E1L11Q & ( (!E1L9Q & (E1_index[1] & ((!E1_index[4])))) # (E1L9Q & (E1_index[0] & (!E1_index[1] $ (!E1_index[4])))) ) ) # ( !E1L11Q & ( (!E1_index[1] & (!E1_index[0] $ (((E1L9Q & !E1_index[4]))))) # (E1_index[1] & (!E1_index[0] & (!E1L9Q $ (!E1_index[4])))) ) );
+
+
+--E1L37 is Shifter:U3|Mux21~0 at LABCELL_X88_Y8_N30
+E1L37 = ( E1L11Q & ( (!E1_index[4] & (E1_index[1] & (!E1L9Q $ (E1_index[0])))) # (E1_index[4] & (E1L9Q & (!E1_index[1] $ (!E1_index[0])))) ) ) # ( !E1L11Q & ( (!E1_index[1] & (!E1_index[4] $ (((E1L9Q & !E1_index[0]))))) ) );
+
+
+--E1L50 is Shifter:U3|Mux34~0 at MLABCELL_X72_Y2_N21
+E1L50 = ( E1L11Q & ( (!E1L9Q & (!E1_index[4] & (!E1L7Q $ (!E1L5Q)))) # (E1L9Q & (!E1_index[4] $ (((!E1L7Q) # (E1L5Q))))) ) ) # ( !E1L11Q & ( (!E1_index[4] & (!E1L7Q)) # (E1_index[4] & (((E1L5Q & !E1L9Q)))) ) );
+
+
+--E1L49 is Shifter:U3|Mux33~0 at LABCELL_X88_Y8_N33
+E1L49 = ( E1L11Q & ( (!E1L9Q & (((E1_index[0] & !E1_index[4])))) # (E1L9Q & ((!E1_index[1] & (E1_index[0])) # (E1_index[1] & ((!E1_index[0]) # (E1_index[4]))))) ) ) # ( !E1L11Q & ( (!E1_index[4] & ((!E1_index[0]) # ((!E1L9Q & E1_index[1])))) # (E1_index[4] & (!E1L9Q)) ) );
+
+
+--E1L48 is Shifter:U3|Mux32~0 at LABCELL_X88_Y8_N6
+E1L48 = ( E1L11Q & ( (!E1_index[4] & ((!E1_index[1] & ((E1_index[0]) # (E1L9Q))) # (E1_index[1] & ((!E1_index[0]))))) # (E1_index[4] & (E1L9Q & ((E1_index[0]) # (E1_index[1])))) ) ) # ( !E1L11Q & ( (!E1_index[4] & ((!E1_index[1] & ((!E1_index[0]) # (E1L9Q))) # (E1_index[1] & ((E1_index[0]))))) # (E1_index[4] & (!E1L9Q)) ) );
+
+
+--E1L47 is Shifter:U3|Mux31~0 at MLABCELL_X72_Y2_N36
+E1L47 = ( E1L11Q & ( (!E1_index[4] & (!E1L5Q $ (((!E1L7Q & !E1L9Q))))) # (E1_index[4] & (E1L9Q & ((!E1L7Q) # (E1L5Q)))) ) ) # ( !E1L11Q & ( (!E1L5Q & (!E1_index[4] & (!E1L7Q))) # (E1L5Q & (!E1_index[4] $ (((!E1L9Q))))) ) );
+
+
+--E1L46 is Shifter:U3|Mux30~0 at LABCELL_X88_Y8_N9
+E1L46 = ( E1L11Q & ( (!E1L9Q & (!E1_index[1] & (E1_index[0] & !E1_index[4]))) # (E1L9Q & (!E1_index[1] $ (((!E1_index[4]) # (E1_index[0]))))) ) ) # ( !E1L11Q & ( (!E1L9Q & (E1_index[1] & (E1_index[0] & E1_index[4]))) # (E1L9Q & (!E1_index[1] & (!E1_index[0] & !E1_index[4]))) ) );
+
+
+--E1L45 is Shifter:U3|Mux29~0 at MLABCELL_X72_Y2_N39
+E1L45 = ( E1L11Q & ( (!E1_index[4] & (!E1L7Q $ (((!E1L5Q) # (E1L9Q))))) # (E1_index[4] & (E1L9Q & (!E1L5Q $ (E1L7Q)))) ) ) # ( !E1L11Q & ( (!E1_index[4] & (((E1L9Q & !E1L7Q)))) # (E1_index[4] & (E1L5Q & (!E1L9Q))) ) );
+
+
+--E1L44 is Shifter:U3|Mux28~0 at LABCELL_X88_Y37_N18
+E1L44 = ( E1L9Q & ( E1L7Q & ( (E1L11Q & (!E1_index[4] $ (E1L5Q))) ) ) ) # ( !E1L9Q & ( E1L7Q & ( (E1_index[4] & (!E1L11Q & E1L5Q)) ) ) ) # ( E1L9Q & ( !E1L7Q & ( (!E1_index[4] & (!E1L11Q & !E1L5Q)) # (E1_index[4] & (E1L11Q)) ) ) ) # ( !E1L9Q & ( !E1L7Q & ( (!E1_index[4] & (!E1L11Q $ (E1L5Q))) ) ) );
+
+
+--E1L57 is Shifter:U3|Mux41~0 at LABCELL_X88_Y8_N42
+E1L57 = ( E1L11Q & ( (!E1_index[1] & (!E1_index[4] $ (((E1L9Q & !E1_index[0]))))) # (E1_index[1] & (E1_index[4] & ((E1_index[0]) # (E1L9Q)))) ) ) # ( !E1L11Q & ( (!E1L9Q & (!E1_index[0] $ (((E1_index[1] & !E1_index[4]))))) # (E1L9Q & (!E1_index[1] & (!E1_index[0] & !E1_index[4]))) ) );
+
+
+--E1L56 is Shifter:U3|Mux40~0 at MLABCELL_X72_Y2_N57
+E1L56 = ( E1_index[4] & ( E1L11Q & ( E1L9Q ) ) ) # ( !E1_index[4] & ( E1L11Q & ( (!E1L5Q & ((!E1L7Q) # (!E1L9Q))) # (E1L5Q & ((E1L9Q))) ) ) ) # ( E1_index[4] & ( !E1L11Q & ( (!E1L9Q & ((!E1L7Q) # (!E1L5Q))) ) ) ) # ( !E1_index[4] & ( !E1L11Q & ( (!E1L7Q & (E1L5Q)) # (E1L7Q & ((!E1L9Q))) ) ) );
+
+
+--E1L55 is Shifter:U3|Mux39~0 at LABCELL_X88_Y36_N0
+E1L55 = ( E1L11Q & ( E1_index[4] & ( E1L9Q ) ) ) # ( !E1L11Q & ( E1_index[4] & ( (!E1L9Q & ((!E1L5Q) # (!E1L7Q))) ) ) ) # ( E1L11Q & ( !E1_index[4] & ( (!E1L7Q) # (E1L5Q) ) ) ) # ( !E1L11Q & ( !E1_index[4] & ( (!E1L9Q & ((E1L7Q))) # (E1L9Q & (!E1L5Q)) ) ) );
+
+
+--E1L54 is Shifter:U3|Mux38~0 at LABCELL_X88_Y36_N45
+E1L54 = ( E1_index[4] & ( E1L11Q & ( (!E1L5Q & ((E1L9Q))) # (E1L5Q & (E1L7Q)) ) ) ) # ( !E1_index[4] & ( E1L11Q & ( (!E1L5Q & (!E1L7Q & !E1L9Q)) # (E1L5Q & ((!E1L7Q) # (!E1L9Q))) ) ) ) # ( E1_index[4] & ( !E1L11Q & ( (!E1L5Q & !E1L9Q) ) ) ) # ( !E1_index[4] & ( !E1L11Q & ( (!E1L5Q & ((E1L9Q))) # (E1L5Q & (E1L7Q & !E1L9Q)) ) ) );
+
+
+--E1L53 is Shifter:U3|Mux37~0 at LABCELL_X88_Y37_N51
+E1L53 = ( E1L9Q & ( E1L7Q & ( (E1L11Q & !E1L5Q) ) ) ) # ( !E1L9Q & ( E1L7Q & ( (!E1L11Q & (!E1L5Q $ (!E1_index[4]))) # (E1L11Q & (E1L5Q & E1_index[4])) ) ) ) # ( E1L9Q & ( !E1L7Q & ( (E1L11Q & (E1L5Q & !E1_index[4])) ) ) ) # ( !E1L9Q & ( !E1L7Q & ( (E1L11Q & (!E1L5Q & !E1_index[4])) ) ) );
+
+
+--E1L52 is Shifter:U3|Mux36~0 at LABCELL_X88_Y36_N51
+E1L52 = ( E1_index[4] & ( E1L11Q & ( (E1L7Q & (!E1L5Q $ (!E1L9Q))) ) ) ) # ( !E1_index[4] & ( E1L11Q & ( !E1L7Q $ (((!E1L5Q & E1L9Q))) ) ) ) # ( E1_index[4] & ( !E1L11Q & ( (!E1L5Q & !E1L9Q) ) ) ) # ( !E1_index[4] & ( !E1L11Q & ( (!E1L5Q & (!E1L7Q & E1L9Q)) # (E1L5Q & (E1L7Q & !E1L9Q)) ) ) );
+
+
+--E1L51 is Shifter:U3|Mux35~0 at LABCELL_X88_Y36_N18
+E1L51 = ( E1L11Q & ( E1_index[4] & ( (!E1L5Q & (E1L9Q)) # (E1L5Q & ((E1L7Q))) ) ) ) # ( !E1L11Q & ( E1_index[4] & ( (!E1L9Q & (!E1L5Q & E1L7Q)) ) ) ) # ( E1L11Q & ( !E1_index[4] & ( (!E1L7Q & (!E1L9Q $ (E1L5Q))) ) ) ) # ( !E1L11Q & ( !E1_index[4] & ( (!E1L9Q & (E1L5Q & E1L7Q)) ) ) );
+
+
+--E1L21 is Shifter:U3|Mux5~1 at LABCELL_X88_Y8_N21
+E1L21 = ( E1L5Q & ( !E1_index[1] ) ) # ( !E1L5Q & ( E1_index[1] ) );
+
+
+--E1L1 is Shifter:U3|Add0~0 at LABCELL_X88_Y8_N24
+E1L1 = ( E1L5Q & ( !E1L7Q $ (!E1_index[2]) ) ) # ( !E1L5Q & ( E1_index[2] ) );
+
+
+--E1L13 is Shifter:U3|index~0 at LABCELL_X88_Y8_N57
+E1L13 = ( E1_index[4] & ( E1L9Q & ( (!E1L7Q) # (!E1L5Q) ) ) ) # ( !E1_index[4] & ( E1L9Q & ( (E1L7Q & (E1_index[3] & E1L5Q)) ) ) ) # ( E1_index[4] & ( !E1L9Q ) );
+
+
+--E1L14 is Shifter:U3|index~1 at LABCELL_X88_Y8_N48
+E1L14 = ( E1_index[2] & ( (!E1L7Q & (((E1_index[3])))) # (E1L7Q & ((!E1L5Q & ((E1_index[3]))) # (E1L5Q & (!E1_index[4] & !E1_index[3])))) ) ) # ( !E1_index[2] & ( E1_index[3] ) );
+
+
+--E1L4 is Shifter:U3|index[0]~2 at LABCELL_X88_Y8_N51
+E1L4 = !E1_index[0];
+
+
+
+--S is S at PIN_G8
+S = INPUT();
+
+
+--A1L7 is HEX0[0]~output at IOOBUF_X66_Y0_N42
+A1L7 = OUTPUT_BUFFER.O(.I(E1L22), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[0] is HEX0[0] at PIN_Y19
+HEX0[0] = OUTPUT();
+
+
+--A1L9 is HEX0[1]~output at IOOBUF_X70_Y0_N19
+A1L9 = OUTPUT_BUFFER.O(.I(E1L20), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[1] is HEX0[1] at PIN_V19
+HEX0[1] = OUTPUT();
+
+
+--A1L11 is HEX0[2]~output at IOOBUF_X89_Y8_N39
+A1L11 = OUTPUT_BUFFER.O(.I(E1L19), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[2] is HEX0[2] at PIN_R21
+HEX0[2] = OUTPUT();
+
+
+--A1L13 is HEX0[3]~output at IOOBUF_X89_Y9_N5
+A1L13 = OUTPUT_BUFFER.O(.I(E1L18), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[3] is HEX0[3] at PIN_P16
+HEX0[3] = OUTPUT();
+
+
+--A1L15 is HEX0[4]~output at IOOBUF_X89_Y9_N39
+A1L15 = OUTPUT_BUFFER.O(.I(E1L17), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[4] is HEX0[4] at PIN_P19
+HEX0[4] = OUTPUT();
+
+
+--A1L17 is HEX0[5]~output at IOOBUF_X70_Y0_N2
+A1L17 = OUTPUT_BUFFER.O(.I(E1L16), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[5] is HEX0[5] at PIN_V18
+HEX0[5] = OUTPUT();
+
+
+--A1L19 is HEX0[6]~output at IOOBUF_X89_Y35_N96
+A1L19 = OUTPUT_BUFFER.O(.I(E1L15), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[6] is HEX0[6] at PIN_N21
+HEX0[6] = OUTPUT();
+
+
+--A1L22 is HEX1[0]~output at IOOBUF_X64_Y0_N36
+A1L22 = OUTPUT_BUFFER.O(.I(E1L29), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1[0] is HEX1[0] at PIN_AA22
+HEX1[0] = OUTPUT();
+
+
+--A1L24 is HEX1[1]~output at IOOBUF_X68_Y0_N19
+A1L24 = OUTPUT_BUFFER.O(.I(E1L28), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1[1] is HEX1[1] at PIN_P14
+HEX1[1] = OUTPUT();
+
+
+--A1L26 is HEX1[2]~output at IOOBUF_X66_Y0_N59
+A1L26 = OUTPUT_BUFFER.O(.I(E1L27), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1[2] is HEX1[2] at PIN_Y20
+HEX1[2] = OUTPUT();
+
+
+--A1L28 is HEX1[3]~output at IOOBUF_X89_Y8_N22
+A1L28 = OUTPUT_BUFFER.O(.I(E1L26), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1[3] is HEX1[3] at PIN_R17
+HEX1[3] = OUTPUT();
+
+
+--A1L30 is HEX1[4]~output at IOOBUF_X66_Y0_N76
+A1L30 = OUTPUT_BUFFER.O(.I(E1L25), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1[4] is HEX1[4] at PIN_W22
+HEX1[4] = OUTPUT();
+
+
+--A1L32 is HEX1[5]~output at IOOBUF_X70_Y0_N36
+A1L32 = OUTPUT_BUFFER.O(.I(E1L24), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1[5] is HEX1[5] at PIN_V21
+HEX1[5] = OUTPUT();
+
+
+--A1L34 is HEX1[6]~output at IOOBUF_X89_Y4_N79
+A1L34 = OUTPUT_BUFFER.O(.I(E1L23), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1[6] is HEX1[6] at PIN_T19
+HEX1[6] = OUTPUT();
+
+
+--A1L37 is HEX2[0]~output at IOOBUF_X68_Y0_N36
+A1L37 = OUTPUT_BUFFER.O(.I(E1L36), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[0] is HEX2[0] at PIN_W21
+HEX2[0] = OUTPUT();
+
+
+--A1L39 is HEX2[1]~output at IOOBUF_X70_Y0_N53
+A1L39 = OUTPUT_BUFFER.O(.I(E1L35), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[1] is HEX2[1] at PIN_U22
+HEX2[1] = OUTPUT();
+
+
+--A1L41 is HEX2[2]~output at IOOBUF_X89_Y6_N56
+A1L41 = OUTPUT_BUFFER.O(.I(E1L34), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[2] is HEX2[2] at PIN_R22
+HEX2[2] = OUTPUT();
+
+
+--A1L43 is HEX2[3]~output at IOOBUF_X89_Y9_N22
+A1L43 = OUTPUT_BUFFER.O(.I(E1L33), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[3] is HEX2[3] at PIN_P17
+HEX2[3] = OUTPUT();
+
+
+--A1L45 is HEX2[4]~output at IOOBUF_X89_Y4_N62
+A1L45 = OUTPUT_BUFFER.O(.I(E1L32), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[4] is HEX2[4] at PIN_T17
+HEX2[4] = OUTPUT();
+
+
+--A1L47 is HEX2[5]~output at IOOBUF_X89_Y6_N5
+A1L47 = OUTPUT_BUFFER.O(.I(E1L31), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[5] is HEX2[5] at PIN_T15
+HEX2[5] = OUTPUT();
+
+
+--A1L49 is HEX2[6]~output at IOOBUF_X68_Y0_N2
+A1L49 = OUTPUT_BUFFER.O(.I(E1L30), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[6] is HEX2[6] at PIN_R14
+HEX2[6] = OUTPUT();
+
+
+--A1L52 is HEX3[0]~output at IOOBUF_X72_Y0_N2
+A1L52 = OUTPUT_BUFFER.O(.I(E1L43), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[0] is HEX3[0] at PIN_U17
+HEX3[0] = OUTPUT();
+
+
+--A1L54 is HEX3[1]~output at IOOBUF_X89_Y37_N5
+A1L54 = OUTPUT_BUFFER.O(.I(E1L42), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[1] is HEX3[1] at PIN_K17
+HEX3[1] = OUTPUT();
+
+
+--A1L56 is HEX3[2]~output at IOOBUF_X72_Y0_N19
+A1L56 = OUTPUT_BUFFER.O(.I(E1L41), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[2] is HEX3[2] at PIN_U16
+HEX3[2] = OUTPUT();
+
+
+--A1L58 is HEX3[3]~output at IOOBUF_X89_Y37_N39
+A1L58 = OUTPUT_BUFFER.O(.I(E1L40), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[3] is HEX3[3] at PIN_M20
+HEX3[3] = OUTPUT();
+
+
+--A1L60 is HEX3[4]~output at IOOBUF_X66_Y0_N93
+A1L60 = OUTPUT_BUFFER.O(.I(E1L39), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[4] is HEX3[4] at PIN_Y22
+HEX3[4] = OUTPUT();
+
+
+--A1L62 is HEX3[5]~output at IOOBUF_X89_Y9_N56
+A1L62 = OUTPUT_BUFFER.O(.I(E1L38), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[5] is HEX3[5] at PIN_P18
+HEX3[5] = OUTPUT();
+
+
+--A1L64 is HEX3[6]~output at IOOBUF_X89_Y6_N22
+A1L64 = OUTPUT_BUFFER.O(.I(E1L37), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[6] is HEX3[6] at PIN_R15
+HEX3[6] = OUTPUT();
+
+
+--A1L67 is HEX4[0]~output at IOOBUF_X68_Y0_N53
+A1L67 = OUTPUT_BUFFER.O(.I(E1L50), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[0] is HEX4[0] at PIN_Y21
+HEX4[0] = OUTPUT();
+
+
+--A1L69 is HEX4[1]~output at IOOBUF_X89_Y8_N56
+A1L69 = OUTPUT_BUFFER.O(.I(E1L49), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[1] is HEX4[1] at PIN_P22
+HEX4[1] = OUTPUT();
+
+
+--A1L71 is HEX4[2]~output at IOOBUF_X89_Y6_N39
+A1L71 = OUTPUT_BUFFER.O(.I(E1L48), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[2] is HEX4[2] at PIN_T22
+HEX4[2] = OUTPUT();
+
+
+--A1L73 is HEX4[3]~output at IOOBUF_X72_Y0_N53
+A1L73 = OUTPUT_BUFFER.O(.I(E1L47), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[3] is HEX4[3] at PIN_U21
+HEX4[3] = OUTPUT();
+
+
+--A1L75 is HEX4[4]~output at IOOBUF_X89_Y4_N96
+A1L75 = OUTPUT_BUFFER.O(.I(E1L46), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[4] is HEX4[4] at PIN_T20
+HEX4[4] = OUTPUT();
+
+
+--A1L77 is HEX4[5]~output at IOOBUF_X72_Y0_N36
+A1L77 = OUTPUT_BUFFER.O(.I(E1L45), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[5] is HEX4[5] at PIN_U20
+HEX4[5] = OUTPUT();
+
+
+--A1L79 is HEX4[6]~output at IOOBUF_X89_Y37_N22
+A1L79 = OUTPUT_BUFFER.O(.I(E1L44), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[6] is HEX4[6] at PIN_L17
+HEX4[6] = OUTPUT();
+
+
+--A1L82 is HEX5[0]~output at IOOBUF_X89_Y8_N5
+A1L82 = OUTPUT_BUFFER.O(.I(E1L57), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX5[0] is HEX5[0] at PIN_R16
+HEX5[0] = OUTPUT();
+
+
+--A1L84 is HEX5[1]~output at IOOBUF_X64_Y0_N19
+A1L84 = OUTPUT_BUFFER.O(.I(E1L56), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX5[1] is HEX5[1] at PIN_V16
+HEX5[1] = OUTPUT();
+
+
+--A1L86 is HEX5[2]~output at IOOBUF_X89_Y36_N22
+A1L86 = OUTPUT_BUFFER.O(.I(E1L55), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX5[2] is HEX5[2] at PIN_M18
+HEX5[2] = OUTPUT();
+
+
+--A1L88 is HEX5[3]~output at IOOBUF_X89_Y36_N39
+A1L88 = OUTPUT_BUFFER.O(.I(E1L54), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX5[3] is HEX5[3] at PIN_M22
+HEX5[3] = OUTPUT();
+
+
+--A1L90 is HEX5[4]~output at IOOBUF_X89_Y37_N56
+A1L90 = OUTPUT_BUFFER.O(.I(E1L53), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX5[4] is HEX5[4] at PIN_M21
+HEX5[4] = OUTPUT();
+
+
+--A1L92 is HEX5[5]~output at IOOBUF_X89_Y36_N5
+A1L92 = OUTPUT_BUFFER.O(.I(E1L52), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX5[5] is HEX5[5] at PIN_N19
+HEX5[5] = OUTPUT();
+
+
+--A1L94 is HEX5[6]~output at IOOBUF_X89_Y36_N56
+A1L94 = OUTPUT_BUFFER.O(.I(E1L51), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX5[6] is HEX5[6] at PIN_L22
+HEX5[6] = OUTPUT();
+
+
+--A1L3 is clk~input at IOIBUF_X89_Y35_N61
+A1L3 = INPUT_BUFFER(.I(clk), );
+
+
+--clk is clk at PIN_M16
+clk = INPUT();
+
+
+--A1L96 is reset_n~input at IOIBUF_X89_Y4_N44
+A1L96 = INPUT_BUFFER(.I(reset_n), );
+
+
+--reset_n is reset_n at PIN_T18
+reset_n = INPUT();
+
+
+
+--A1L4 is clk~inputCLKENA0 at CLKCTRL_G10
+A1L4 = cyclonev_clkena(.INCLK = A1L3) WITH (clock_type = "Global Clock", ena_register_mode = "always enabled");
+
+
+--E1L7Q is Shifter:U3|index[1]~DUPLICATE at FF_X88_Y8_N23
+--register power-up is low
+
+E1L7Q = DFFEAS(E1L21, GLOBAL(A1L4), A1L96,  ,  ,  ,  ,  ,  );
+
+
+--E1L5Q is Shifter:U3|index[0]~DUPLICATE at FF_X88_Y8_N53
+--register power-up is low
+
+E1L5Q = DFFEAS(E1L4, GLOBAL(A1L4), A1L96,  ,  ,  ,  ,  ,  );
+
+
+--E1L9Q is Shifter:U3|index[2]~DUPLICATE at FF_X88_Y8_N26
+--register power-up is low
+
+E1L9Q = DFFEAS(E1L1, GLOBAL(A1L4), A1L96,  ,  ,  ,  ,  ,  );
+
+
+--E1L11Q is Shifter:U3|index[3]~DUPLICATE at FF_X88_Y8_N50
+--register power-up is low
+
+E1L11Q = DFFEAS(E1L14, GLOBAL(A1L4), A1L96,  ,  ,  ,  ,  ,  );
+
+

@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, S:/CPET_DSD_LAB/Comp1 Exam/Comp1Exam.vhd
+source_file = 1, c:/intelfpga/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, S:/CPET_DSD_LAB/Comp1 Exam/db/Comp1Exam.cbx.xml
+design_name = Comp1Exam
+instance = comp, \X~output\, X~output, Comp1Exam, 1
+instance = comp, \F~input\, F~input, Comp1Exam, 1
+instance = comp, \D~input\, D~input, Comp1Exam, 1
+instance = comp, \E~input\, E~input, Comp1Exam, 1
+instance = comp, \X~0\, X~0, Comp1Exam, 1
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, Comp1Exam, 1

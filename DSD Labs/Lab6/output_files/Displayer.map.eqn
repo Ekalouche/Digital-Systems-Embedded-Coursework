@@ -1,0 +1,1359 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--E1L30 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[7]~1
+E1L30_adder_eqn = ( VCC ) + ( E1L28 ) + ( E1L27 );
+E1L30 = SUM(E1L30_adder_eqn);
+
+
+--E1L34 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~1
+E1L34_adder_eqn = ( VCC ) + ( GND ) + ( E1L40 );
+E1L34 = SUM(E1L34_adder_eqn);
+
+
+--H1L110 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_8~1
+H1L110_adder_eqn = ( VCC ) + ( GND ) + ( H1L115 );
+H1L110 = SUM(H1L110_adder_eqn);
+
+
+--H1L82 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~1
+H1L82_adder_eqn = ( VCC ) + ( GND ) + ( H1L87 );
+H1L82 = SUM(H1L82_adder_eqn);
+
+
+--H1L54 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1
+H1L54_adder_eqn = ( VCC ) + ( GND ) + ( H1L59 );
+H1L54 = SUM(H1L54_adder_eqn);
+
+
+--H1L26 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~1
+H1L26_adder_eqn = ( VCC ) + ( GND ) + ( H1L31 );
+H1L26 = SUM(H1L26_adder_eqn);
+
+
+--L1L34 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~1
+L1L34_adder_eqn = ( VCC ) + ( GND ) + ( L1L55 );
+L1L34 = SUM(L1L34_adder_eqn);
+
+
+--L1L38 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~5
+L1L38_adder_eqn = ( Abs_num[0] ) + ( VCC ) + ( L1L59 );
+L1L38 = SUM(L1L38_adder_eqn);
+
+--L1L39 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~6
+L1L39_adder_eqn = ( Abs_num[0] ) + ( VCC ) + ( L1L59 );
+L1L39 = CARRY(L1L39_adder_eqn);
+
+
+--L2L122 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~1
+L2L122_adder_eqn = ( (!L1L34 & ((L1L38))) # (L1L34 & (Abs_num[0])) ) + ( VCC ) + ( L2L143 );
+L2L122 = SUM(L2L122_adder_eqn);
+
+--L2L123 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~2
+L2L123_adder_eqn = ( (!L1L34 & ((L1L38))) # (L1L34 & (Abs_num[0])) ) + ( VCC ) + ( L2L143 );
+L2L123 = CARRY(L2L123_adder_eqn);
+
+
+--L2L126 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~5
+L2L126_adder_eqn = ( VCC ) + ( GND ) + ( L2L147 );
+L2L126 = SUM(L2L126_adder_eqn);
+
+
+--L1L30 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[7]~1
+L1L30_adder_eqn = ( VCC ) + ( L1L28 ) + ( L1L27 );
+L1L30 = SUM(L1L30_adder_eqn);
+
+
+--L1L2 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[0]~5
+L1L2_adder_eqn = ( Abs_num[1] ) + ( !VCC ) + ( !VCC );
+L1L2 = SUM(L1L2_adder_eqn);
+
+--L1L3 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[0]~6
+L1L3_adder_eqn = ( Abs_num[1] ) + ( !VCC ) + ( !VCC );
+L1L3 = CARRY(L1L3_adder_eqn);
+
+--L1L4 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[0]~7
+L1L4_share_eqn = VCC;
+L1L4 = SHARE(L1L4_share_eqn);
+
+
+--L1L42 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~9
+L1L42_adder_eqn = ( (!L1L30 & ((L1L2))) # (L1L30 & (Abs_num[1])) ) + ( VCC ) + ( L1L39 );
+L1L42 = SUM(L1L42_adder_eqn);
+
+--L1L43 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~10
+L1L43_adder_eqn = ( (!L1L30 & ((L1L2))) # (L1L30 & (Abs_num[1])) ) + ( VCC ) + ( L1L39 );
+L1L43 = CARRY(L1L43_adder_eqn);
+
+
+--L2L86 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~1
+L2L86_adder_eqn = ( VCC ) + ( GND ) + ( L2L103 );
+L2L86 = SUM(L2L86_adder_eqn);
+
+
+--L2L90 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~5
+L2L90_adder_eqn = ( (!L1L34 & (((L1L42)))) # (L1L34 & (((L1L74)) # (L1L73))) ) + ( VCC ) + ( L2L107 );
+L2L90 = SUM(L2L90_adder_eqn);
+
+--L2L91 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~6
+L2L91_adder_eqn = ( (!L1L34 & (((L1L42)))) # (L1L34 & (((L1L74)) # (L1L73))) ) + ( VCC ) + ( L2L107 );
+L2L91 = CARRY(L2L91_adder_eqn);
+
+
+--L2L130 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~9
+L2L130_adder_eqn = ( (!L2L86 & (((L2L90)))) # (L2L86 & (((L1L86)) # (L1L87))) ) + ( GND ) + ( L2L123 );
+L2L130 = SUM(L2L130_adder_eqn);
+
+--L2L131 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~10
+L2L131_adder_eqn = ( (!L2L86 & (((L2L90)))) # (L2L86 & (((L1L86)) # (L1L87))) ) + ( GND ) + ( L2L123 );
+L2L131 = CARRY(L2L131_adder_eqn);
+
+
+--L1L6 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[1]~9
+L1L6_adder_eqn = ( !Abs_num[2] ) + ( L1L4 ) + ( L1L3 );
+L1L6 = SUM(L1L6_adder_eqn);
+
+--L1L7 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[1]~10
+L1L7_adder_eqn = ( !Abs_num[2] ) + ( L1L4 ) + ( L1L3 );
+L1L7 = CARRY(L1L7_adder_eqn);
+
+--L1L8 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[1]~11
+L1L8_share_eqn = Abs_num[2];
+L1L8 = SHARE(L1L8_share_eqn);
+
+
+--L1L46 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~13
+L1L46_adder_eqn = ( ((L1L30 & Abs_num[2])) # (L1L75) ) + ( GND ) + ( L1L43 );
+L1L46 = SUM(L1L46_adder_eqn);
+
+--L1L47 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~14
+L1L47_adder_eqn = ( ((L1L30 & Abs_num[2])) # (L1L75) ) + ( GND ) + ( L1L43 );
+L1L47 = CARRY(L1L47_adder_eqn);
+
+
+--L2L54 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~1
+L2L54_adder_eqn = ( VCC ) + ( GND ) + ( L2L67 );
+L2L54 = SUM(L2L54_adder_eqn);
+
+
+--L2L58 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~5
+L2L58_adder_eqn = ( (!L1L34 & (((L1L46)))) # (L1L34 & (((L1L76)) # (L1L75))) ) + ( VCC ) + ( L2L71 );
+L2L58 = SUM(L2L58_adder_eqn);
+
+--L2L59 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~6
+L2L59_adder_eqn = ( (!L1L34 & (((L1L46)))) # (L1L34 & (((L1L76)) # (L1L75))) ) + ( VCC ) + ( L2L71 );
+L2L59 = CARRY(L2L59_adder_eqn);
+
+
+--L2L94 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~9
+L2L94_adder_eqn = ( (!L2L54 & (((L2L58)))) # (L2L54 & (((L1L88)) # (L1L89))) ) + ( GND ) + ( L2L91 );
+L2L94 = SUM(L2L94_adder_eqn);
+
+--L2L95 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~10
+L2L95_adder_eqn = ( (!L2L54 & (((L2L58)))) # (L2L54 & (((L1L88)) # (L1L89))) ) + ( GND ) + ( L2L91 );
+L2L95 = CARRY(L2L95_adder_eqn);
+
+
+--L2L134 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~13
+L2L134_adder_eqn = ( (!L2L86 & ((L2L94))) # (L2L86 & (L2L175)) ) + ( VCC ) + ( L2L131 );
+L2L134 = SUM(L2L134_adder_eqn);
+
+--L2L135 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~14
+L2L135_adder_eqn = ( (!L2L86 & ((L2L94))) # (L2L86 & (L2L175)) ) + ( VCC ) + ( L2L131 );
+L2L135 = CARRY(L2L135_adder_eqn);
+
+
+--L1L10 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[2]~13
+L1L10_adder_eqn = ( Abs_num[3] ) + ( L1L8 ) + ( L1L7 );
+L1L10 = SUM(L1L10_adder_eqn);
+
+--L1L11 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[2]~14
+L1L11_adder_eqn = ( Abs_num[3] ) + ( L1L8 ) + ( L1L7 );
+L1L11 = CARRY(L1L11_adder_eqn);
+
+--L1L12 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[2]~15
+L1L12_share_eqn = GND;
+L1L12 = SHARE(L1L12_share_eqn);
+
+
+--L1L50 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~17
+L1L50_adder_eqn = ( (!L1L30 & ((L1L10))) # (L1L30 & (Abs_num[3])) ) + ( VCC ) + ( L1L47 );
+L1L50 = SUM(L1L50_adder_eqn);
+
+--L1L51 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~18
+L1L51_adder_eqn = ( (!L1L30 & ((L1L10))) # (L1L30 & (Abs_num[3])) ) + ( VCC ) + ( L1L47 );
+L1L51 = CARRY(L1L51_adder_eqn);
+
+
+--L2L26 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~1
+L2L26_adder_eqn = ( VCC ) + ( GND ) + ( L2L35 );
+L2L26 = SUM(L2L26_adder_eqn);
+
+
+--L2L30 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~5
+L2L30_adder_eqn = ( (!L1L34 & (((L1L50)))) # (L1L34 & (((L1L78)) # (L1L77))) ) + ( VCC ) + ( L2L39 );
+L2L30 = SUM(L2L30_adder_eqn);
+
+--L2L31 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~6
+L2L31_adder_eqn = ( (!L1L34 & (((L1L50)))) # (L1L34 & (((L1L78)) # (L1L77))) ) + ( VCC ) + ( L2L39 );
+L2L31 = CARRY(L2L31_adder_eqn);
+
+
+--L2L62 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~9
+L2L62_adder_eqn = ( (!L2L26 & (((L2L30)))) # (L2L26 & (((L1L90)) # (L1L91))) ) + ( GND ) + ( L2L59 );
+L2L62 = SUM(L2L62_adder_eqn);
+
+--L2L63 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~10
+L2L63_adder_eqn = ( (!L2L26 & (((L2L30)))) # (L2L26 & (((L1L90)) # (L1L91))) ) + ( GND ) + ( L2L59 );
+L2L63 = CARRY(L2L63_adder_eqn);
+
+
+--L2L98 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~13
+L2L98_adder_eqn = ( (!L2L54 & ((L2L62))) # (L2L54 & (L2L168)) ) + ( VCC ) + ( L2L95 );
+L2L98 = SUM(L2L98_adder_eqn);
+
+--L2L99 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~14
+L2L99_adder_eqn = ( (!L2L54 & ((L2L62))) # (L2L54 & (L2L168)) ) + ( VCC ) + ( L2L95 );
+L2L99 = CARRY(L2L99_adder_eqn);
+
+
+--L2L138 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~17
+L2L138_adder_eqn = ( (!L2L86 & ((L2L98))) # (L2L86 & (L2L176)) ) + ( GND ) + ( L2L135 );
+L2L138 = SUM(L2L138_adder_eqn);
+
+--L2L139 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~18
+L2L139_adder_eqn = ( (!L2L86 & ((L2L98))) # (L2L86 & (L2L176)) ) + ( GND ) + ( L2L135 );
+L2L139 = CARRY(L2L139_adder_eqn);
+
+
+--E1L26 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[6]~5
+E1L26_adder_eqn = ( Abs_num[7] ) + ( E1L24 ) + ( E1L23 );
+E1L26 = SUM(E1L26_adder_eqn);
+
+--E1L27 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[6]~6
+E1L27_adder_eqn = ( Abs_num[7] ) + ( E1L24 ) + ( E1L23 );
+E1L27 = CARRY(E1L27_adder_eqn);
+
+--E1L28 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[6]~7
+E1L28_share_eqn = GND;
+E1L28 = SHARE(E1L28_share_eqn);
+
+
+--E1L40 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~6
+E1L40_adder_eqn = ( (!E1L30 & ((E1L26))) # (E1L30 & (Abs_num[7])) ) + ( VCC ) + ( E1L44 );
+E1L40 = CARRY(E1L40_adder_eqn);
+
+
+--H1L115 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_8~6
+H1L115_adder_eqn = ( (!H1L82 & (((H1L90)))) # (H1L82 & (((H1L149)) # (H1L148))) ) + ( VCC ) + ( H1L119 );
+H1L115 = CARRY(H1L115_adder_eqn);
+
+
+--H1L87 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~6
+H1L87_adder_eqn = ( (!H1L54 & (((H1L66)))) # (H1L54 & (((H1L145)) # (H1L144))) ) + ( VCC ) + ( H1L91 );
+H1L87 = CARRY(H1L87_adder_eqn);
+
+
+--H1L59 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~6
+H1L59_adder_eqn = ( (!H1L26 & (((H1L42)))) # (H1L26 & (((H1L140)) # (H1L139))) ) + ( VCC ) + ( H1L67 );
+H1L59 = CARRY(H1L59_adder_eqn);
+
+
+--H1L31 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~6
+H1L31_adder_eqn = ( (!H1L2 & (((H1L18)))) # (H1L2 & (((L1L97)) # (L1L96))) ) + ( VCC ) + ( H1L43 );
+H1L31 = CARRY(H1L31_adder_eqn);
+
+
+--L1L54 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~21
+L1L54_adder_eqn = ( (!L1L30 & ((L1L26))) # (L1L30 & (Abs_num[7])) ) + ( VCC ) + ( L1L71 );
+L1L54 = SUM(L1L54_adder_eqn);
+
+--L1L55 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~22
+L1L55_adder_eqn = ( (!L1L30 & ((L1L26))) # (L1L30 & (Abs_num[7])) ) + ( VCC ) + ( L1L71 );
+L1L55 = CARRY(L1L55_adder_eqn);
+
+
+--L1L59 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~26
+L1L59_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+L1L59 = CARRY(L1L59_adder_eqn);
+
+
+--L2L143 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~22
+L2L143_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+L2L143 = CARRY(L2L143_adder_eqn);
+
+
+--L2L147 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~26
+L2L147_adder_eqn = ( (!L2L86 & (((L2L102)))) # (L2L86 & (((L2L183)) # (L2L182))) ) + ( VCC ) + ( L2L151 );
+L2L147 = CARRY(L2L147_adder_eqn);
+
+
+--L1L26 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[6]~17
+L1L26_adder_eqn = ( Abs_num[7] ) + ( L1L24 ) + ( L1L23 );
+L1L26 = SUM(L1L26_adder_eqn);
+
+--L1L27 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[6]~18
+L1L27_adder_eqn = ( Abs_num[7] ) + ( L1L24 ) + ( L1L23 );
+L1L27 = CARRY(L1L27_adder_eqn);
+
+--L1L28 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[6]~19
+L1L28_share_eqn = GND;
+L1L28 = SHARE(L1L28_share_eqn);
+
+
+--L2L102 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~17
+L2L102_adder_eqn = ( (!L2L54 & (((L2L66)))) # (L2L54 & (((L2L174)) # (L2L173))) ) + ( VCC ) + ( L2L111 );
+L2L102 = SUM(L2L102_adder_eqn);
+
+--L2L103 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~18
+L2L103_adder_eqn = ( (!L2L54 & (((L2L66)))) # (L2L54 & (((L2L174)) # (L2L173))) ) + ( VCC ) + ( L2L111 );
+L2L103 = CARRY(L2L103_adder_eqn);
+
+
+--L2L107 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~22
+L2L107_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+L2L107 = CARRY(L2L107_adder_eqn);
+
+
+--L2L66 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~13
+L2L66_adder_eqn = ( (!L2L26 & (((L2L34)))) # (L2L26 & (((L2L167)) # (L2L166))) ) + ( VCC ) + ( L2L75 );
+L2L66 = SUM(L2L66_adder_eqn);
+
+--L2L67 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~14
+L2L67_adder_eqn = ( (!L2L26 & (((L2L34)))) # (L2L26 & (((L2L167)) # (L2L166))) ) + ( VCC ) + ( L2L75 );
+L2L67 = CARRY(L2L67_adder_eqn);
+
+
+--L2L71 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~18
+L2L71_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+L2L71 = CARRY(L2L71_adder_eqn);
+
+
+--L2L34 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~9
+L2L34_adder_eqn = ( (!L2L2 & (((L2L6)))) # (L2L2 & (((L1L96)) # (L1L97))) ) + ( VCC ) + ( L2L43 );
+L2L34 = SUM(L2L34_adder_eqn);
+
+--L2L35 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~10
+L2L35_adder_eqn = ( (!L2L2 & (((L2L6)))) # (L2L2 & (((L1L96)) # (L1L97))) ) + ( VCC ) + ( L2L43 );
+L2L35 = CARRY(L2L35_adder_eqn);
+
+
+--L2L39 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~14
+L2L39_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+L2L39 = CARRY(L2L39_adder_eqn);
+
+
+--E1L22 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[5]~9
+E1L22_adder_eqn = ( Abs_num[6] ) + ( E1L20 ) + ( E1L19 );
+E1L22 = SUM(E1L22_adder_eqn);
+
+--E1L23 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[5]~10
+E1L23_adder_eqn = ( Abs_num[6] ) + ( E1L20 ) + ( E1L19 );
+E1L23 = CARRY(E1L23_adder_eqn);
+
+--E1L24 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[5]~11
+E1L24_share_eqn = GND;
+E1L24 = SHARE(E1L24_share_eqn);
+
+
+--E1L44 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~10
+E1L44_adder_eqn = ( (E1L79) # (E1L78) ) + ( GND ) + ( E1L48 );
+E1L44 = CARRY(E1L44_adder_eqn);
+
+
+--H1L62 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~9
+H1L62_adder_eqn = ( (!H1L26 & ((H1L34))) # (H1L26 & (H1L137)) ) + ( VCC ) + ( H1L71 );
+H1L62 = SUM(H1L62_adder_eqn);
+
+--H1L63 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~10
+H1L63_adder_eqn = ( (!H1L26 & ((H1L34))) # (H1L26 & (H1L137)) ) + ( VCC ) + ( H1L71 );
+H1L63 = CARRY(H1L63_adder_eqn);
+
+
+--H1L90 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~9
+H1L90_adder_eqn = ( (!H1L54 & ((H1L62))) # (H1L54 & (H1L143)) ) + ( GND ) + ( H1L95 );
+H1L90 = SUM(H1L90_adder_eqn);
+
+--H1L91 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~10
+H1L91_adder_eqn = ( (!H1L54 & ((H1L62))) # (H1L54 & (H1L143)) ) + ( GND ) + ( H1L95 );
+H1L91 = CARRY(H1L91_adder_eqn);
+
+
+--H1L2 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~1
+H1L2_adder_eqn = ( VCC ) + ( GND ) + ( H1L19 );
+H1L2 = SUM(H1L2_adder_eqn);
+
+
+--L1L14 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[3]~21
+L1L14_adder_eqn = ( !Abs_num[4] ) + ( L1L12 ) + ( L1L11 );
+L1L14 = SUM(L1L14_adder_eqn);
+
+--L1L15 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[3]~22
+L1L15_adder_eqn = ( !Abs_num[4] ) + ( L1L12 ) + ( L1L11 );
+L1L15 = CARRY(L1L15_adder_eqn);
+
+--L1L16 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[3]~23
+L1L16_share_eqn = Abs_num[4];
+L1L16 = SHARE(L1L16_share_eqn);
+
+
+--L1L62 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~29
+L1L62_adder_eqn = ( ((L1L30 & Abs_num[4])) # (L1L79) ) + ( VCC ) + ( L1L51 );
+L1L62 = SUM(L1L62_adder_eqn);
+
+--L1L63 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~30
+L1L63_adder_eqn = ( ((L1L30 & Abs_num[4])) # (L1L79) ) + ( VCC ) + ( L1L51 );
+L1L63 = CARRY(L1L63_adder_eqn);
+
+
+--H1L6 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~5
+H1L6_adder_eqn = ( (!L1L34 & (((L1L62)))) # (L1L34 & (((L1L80)) # (L1L79))) ) + ( VCC ) + ( H1L23 );
+H1L6 = SUM(H1L6_adder_eqn);
+
+--H1L7 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~6
+H1L7_adder_eqn = ( (!L1L34 & (((L1L62)))) # (L1L34 & (((L1L80)) # (L1L79))) ) + ( VCC ) + ( H1L23 );
+H1L7 = CARRY(H1L7_adder_eqn);
+
+
+--H1L34 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~9
+H1L34_adder_eqn = ( H1L137 ) + ( GND ) + ( H1L47 );
+H1L34 = SUM(H1L34_adder_eqn);
+
+--H1L35 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~10
+H1L35_adder_eqn = ( H1L137 ) + ( GND ) + ( H1L47 );
+H1L35 = CARRY(H1L35_adder_eqn);
+
+
+--H1L119 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_8~10
+H1L119_adder_eqn = ( (!H1L82 & ((H1L94))) # (H1L82 & (H1L147)) ) + ( GND ) + ( H1L123 );
+H1L119 = CARRY(H1L119_adder_eqn);
+
+
+--H1L38 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~13
+H1L38_adder_eqn = ( (!H1L2 & (((H1L10)))) # (H1L2 & (((L1L94)) # (L1L93))) ) + ( VCC ) + ( H1L35 );
+H1L38 = SUM(H1L38_adder_eqn);
+
+--H1L39 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~14
+H1L39_adder_eqn = ( (!H1L2 & (((H1L10)))) # (H1L2 & (((L1L94)) # (L1L93))) ) + ( VCC ) + ( H1L35 );
+H1L39 = CARRY(H1L39_adder_eqn);
+
+
+--H1L66 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~13
+H1L66_adder_eqn = ( (!H1L26 & ((H1L38))) # (H1L26 & (H1L138)) ) + ( GND ) + ( H1L63 );
+H1L66 = SUM(H1L66_adder_eqn);
+
+--H1L67 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~14
+H1L67_adder_eqn = ( (!H1L26 & ((H1L38))) # (H1L26 & (H1L138)) ) + ( GND ) + ( H1L63 );
+H1L67 = CARRY(H1L67_adder_eqn);
+
+
+--L1L18 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[4]~25
+L1L18_adder_eqn = ( !Abs_num[5] ) + ( L1L16 ) + ( L1L15 );
+L1L18 = SUM(L1L18_adder_eqn);
+
+--L1L19 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[4]~26
+L1L19_adder_eqn = ( !Abs_num[5] ) + ( L1L16 ) + ( L1L15 );
+L1L19 = CARRY(L1L19_adder_eqn);
+
+--L1L20 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[4]~27
+L1L20_share_eqn = Abs_num[5];
+L1L20 = SHARE(L1L20_share_eqn);
+
+
+--L1L66 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~33
+L1L66_adder_eqn = ( (!L1L30 & ((L1L18))) # (L1L30 & (Abs_num[5])) ) + ( GND ) + ( L1L63 );
+L1L66 = SUM(L1L66_adder_eqn);
+
+--L1L67 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~34
+L1L67_adder_eqn = ( (!L1L30 & ((L1L18))) # (L1L30 & (Abs_num[5])) ) + ( GND ) + ( L1L63 );
+L1L67 = CARRY(L1L67_adder_eqn);
+
+
+--H1L10 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~9
+H1L10_adder_eqn = ( (!L1L34 & ((L1L66))) # (L1L34 & (L1L81)) ) + ( GND ) + ( H1L7 );
+H1L10 = SUM(H1L10_adder_eqn);
+
+--H1L11 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~10
+H1L11_adder_eqn = ( (!L1L34 & ((L1L66))) # (L1L34 & (L1L81)) ) + ( GND ) + ( H1L7 );
+H1L11 = CARRY(H1L11_adder_eqn);
+
+
+--H1L14 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~13
+H1L14_adder_eqn = ( (!L1L34 & (((L1L70)))) # (L1L34 & (((L1L83)) # (L1L82))) ) + ( VCC ) + ( H1L11 );
+H1L14 = SUM(H1L14_adder_eqn);
+
+--H1L15 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~14
+H1L15_adder_eqn = ( (!L1L34 & (((L1L70)))) # (L1L34 & (((L1L83)) # (L1L82))) ) + ( VCC ) + ( H1L11 );
+H1L15 = CARRY(H1L15_adder_eqn);
+
+
+--H1L42 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~17
+H1L42_adder_eqn = ( H1L141 ) + ( GND ) + ( H1L39 );
+H1L42 = SUM(H1L42_adder_eqn);
+
+--H1L43 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~18
+H1L43_adder_eqn = ( H1L141 ) + ( GND ) + ( H1L39 );
+H1L43 = CARRY(H1L43_adder_eqn);
+
+
+--L1L22 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[5]~29
+L1L22_adder_eqn = ( Abs_num[6] ) + ( L1L20 ) + ( L1L19 );
+L1L22 = SUM(L1L22_adder_eqn);
+
+--L1L23 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[5]~30
+L1L23_adder_eqn = ( Abs_num[6] ) + ( L1L20 ) + ( L1L19 );
+L1L23 = CARRY(L1L23_adder_eqn);
+
+--L1L24 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_6_result_int[5]~31
+L1L24_share_eqn = GND;
+L1L24 = SHARE(L1L24_share_eqn);
+
+
+--L1L70 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~37
+L1L70_adder_eqn = ( ((L1L30 & Abs_num[6])) # (L1L82) ) + ( GND ) + ( L1L67 );
+L1L70 = SUM(L1L70_adder_eqn);
+
+--L1L71 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~38
+L1L71_adder_eqn = ( ((L1L30 & Abs_num[6])) # (L1L82) ) + ( GND ) + ( L1L67 );
+L1L71 = CARRY(L1L71_adder_eqn);
+
+
+--H1L18 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~17
+H1L18_adder_eqn = ( (!L1L34 & (((L1L54)))) # (L1L34 & (((L1L84)) # (L1L85))) ) + ( GND ) + ( H1L15 );
+H1L18 = SUM(H1L18_adder_eqn);
+
+--H1L19 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~18
+H1L19_adder_eqn = ( (!L1L34 & (((L1L54)))) # (L1L34 & (((L1L84)) # (L1L85))) ) + ( GND ) + ( H1L15 );
+H1L19 = CARRY(H1L19_adder_eqn);
+
+
+--L2L2 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~1
+L2L2_adder_eqn = ( VCC ) + ( GND ) + ( L2L7 );
+L2L2 = SUM(L2L2_adder_eqn);
+
+
+--L2L6 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~5
+L2L6_adder_eqn = ( (!L1L34 & (((L1L54)))) # (L1L34 & (((L1L84)) # (L1L85))) ) + ( GND ) + ( L2L11 );
+L2L6 = SUM(L2L6_adder_eqn);
+
+--L2L7 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~6
+L2L7_adder_eqn = ( (!L1L34 & (((L1L54)))) # (L1L34 & (((L1L84)) # (L1L85))) ) + ( GND ) + ( L2L11 );
+L2L7 = CARRY(L2L7_adder_eqn);
+
+
+--L2L151 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~30
+L2L151_adder_eqn = ( (!L2L86 & (((L2L110)))) # (L2L86 & (((L2L181)) # (L2L180))) ) + ( VCC ) + ( L2L155 );
+L2L151 = CARRY(L2L151_adder_eqn);
+
+
+--L2L110 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~25
+L2L110_adder_eqn = ( (!L2L54 & ((L2L74))) # (L2L54 & (L2L172)) ) + ( VCC ) + ( L2L115 );
+L2L110 = SUM(L2L110_adder_eqn);
+
+--L2L111 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~26
+L2L111_adder_eqn = ( (!L2L54 & ((L2L74))) # (L2L54 & (L2L172)) ) + ( VCC ) + ( L2L115 );
+L2L111 = CARRY(L2L111_adder_eqn);
+
+
+--L2L74 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~21
+L2L74_adder_eqn = ( (!L2L26 & (((L2L42)))) # (L2L26 & (((L2L165)) # (L2L164))) ) + ( VCC ) + ( L2L79 );
+L2L74 = SUM(L2L74_adder_eqn);
+
+--L2L75 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~22
+L2L75_adder_eqn = ( (!L2L26 & (((L2L42)))) # (L2L26 & (((L2L165)) # (L2L164))) ) + ( VCC ) + ( L2L79 );
+L2L75 = CARRY(L2L75_adder_eqn);
+
+
+--L2L42 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~17
+L2L42_adder_eqn = ( L2L163 ) + ( GND ) + ( L2L47 );
+L2L42 = SUM(L2L42_adder_eqn);
+
+--L2L43 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~18
+L2L43_adder_eqn = ( L2L163 ) + ( GND ) + ( L2L47 );
+L2L43 = CARRY(L2L43_adder_eqn);
+
+
+--E1L18 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[4]~13
+E1L18_adder_eqn = ( !Abs_num[5] ) + ( E1L16 ) + ( E1L15 );
+E1L18 = SUM(E1L18_adder_eqn);
+
+--E1L19 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[4]~14
+E1L19_adder_eqn = ( !Abs_num[5] ) + ( E1L16 ) + ( E1L15 );
+E1L19 = CARRY(E1L19_adder_eqn);
+
+--E1L20 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[4]~15
+E1L20_share_eqn = Abs_num[5];
+E1L20 = SHARE(E1L20_share_eqn);
+
+
+--E1L48 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~14
+E1L48_adder_eqn = ( (!E1L30 & ((E1L18))) # (E1L30 & (Abs_num[5])) ) + ( GND ) + ( E1L52 );
+E1L48 = CARRY(E1L48_adder_eqn);
+
+
+--H1L70 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~17
+H1L70_adder_eqn = ( (!H1L26 & (((H1L46)))) # (H1L26 & (((L1L91)) # (L1L90))) ) + ( GND ) + ( H1L75 );
+H1L70 = SUM(H1L70_adder_eqn);
+
+--H1L71 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~18
+H1L71_adder_eqn = ( (!H1L26 & (((H1L46)))) # (H1L26 & (((L1L91)) # (L1L90))) ) + ( GND ) + ( H1L75 );
+H1L71 = CARRY(H1L71_adder_eqn);
+
+
+--H1L94 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~13
+H1L94_adder_eqn = ( (!H1L54 & ((H1L70))) # (H1L54 & (H1L142)) ) + ( VCC ) + ( H1L99 );
+H1L94 = SUM(H1L94_adder_eqn);
+
+--H1L95 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~14
+H1L95_adder_eqn = ( (!H1L54 & ((H1L70))) # (H1L54 & (H1L142)) ) + ( VCC ) + ( H1L99 );
+H1L95 = CARRY(H1L95_adder_eqn);
+
+
+--H1L23 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~22
+H1L23_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+H1L23 = CARRY(H1L23_adder_eqn);
+
+
+--H1L46 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~21
+H1L46_adder_eqn = ( (!L1L34 & (((L1L50)))) # (L1L34 & (((L1L78)) # (L1L77))) ) + ( VCC ) + ( H1L51 );
+H1L46 = SUM(H1L46_adder_eqn);
+
+--H1L47 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~22
+H1L47_adder_eqn = ( (!L1L34 & (((L1L50)))) # (L1L34 & (((L1L78)) # (L1L77))) ) + ( VCC ) + ( H1L51 );
+H1L47 = CARRY(H1L47_adder_eqn);
+
+
+--H1L123 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_8~14
+H1L123_adder_eqn = ( (!H1L82 & ((H1L98))) # (H1L82 & (H1L146)) ) + ( VCC ) + ( H1L127 );
+H1L123 = CARRY(H1L123_adder_eqn);
+
+
+--L2L10 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~9
+L2L10_adder_eqn = ( (!L1L34 & (((L1L70)))) # (L1L34 & (((L1L83)) # (L1L82))) ) + ( VCC ) + ( L2L15 );
+L2L10 = SUM(L2L10_adder_eqn);
+
+--L2L11 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~10
+L2L11_adder_eqn = ( (!L1L34 & (((L1L70)))) # (L1L34 & (((L1L83)) # (L1L82))) ) + ( VCC ) + ( L2L15 );
+L2L11 = CARRY(L2L11_adder_eqn);
+
+
+--L2L155 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~34
+L2L155_adder_eqn = ( (!L2L86 & ((L2L114))) # (L2L86 & (L2L179)) ) + ( VCC ) + ( L2L159 );
+L2L155 = CARRY(L2L155_adder_eqn);
+
+
+--L2L114 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~29
+L2L114_adder_eqn = ( (!L2L54 & (((L2L78)))) # (L2L54 & (((L2L171)) # (L2L170))) ) + ( VCC ) + ( L2L119 );
+L2L114 = SUM(L2L114_adder_eqn);
+
+--L2L115 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~30
+L2L115_adder_eqn = ( (!L2L54 & (((L2L78)))) # (L2L54 & (((L2L171)) # (L2L170))) ) + ( VCC ) + ( L2L119 );
+L2L115 = CARRY(L2L115_adder_eqn);
+
+
+--L2L78 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~25
+L2L78_adder_eqn = ( (!L2L26 & ((L2L46))) # (L2L26 & (L2L162)) ) + ( GND ) + ( L2L83 );
+L2L78 = SUM(L2L78_adder_eqn);
+
+--L2L79 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~26
+L2L79_adder_eqn = ( (!L2L26 & ((L2L46))) # (L2L26 & (L2L162)) ) + ( GND ) + ( L2L83 );
+L2L79 = CARRY(L2L79_adder_eqn);
+
+
+--L2L46 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~21
+L2L46_adder_eqn = ( (!L2L2 & (((L2L14)))) # (L2L2 & (((L1L93)) # (L1L94))) ) + ( VCC ) + ( L2L51 );
+L2L46 = SUM(L2L46_adder_eqn);
+
+--L2L47 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~22
+L2L47_adder_eqn = ( (!L2L2 & (((L2L14)))) # (L2L2 & (((L1L93)) # (L1L94))) ) + ( VCC ) + ( L2L51 );
+L2L47 = CARRY(L2L47_adder_eqn);
+
+
+--E1L14 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[3]~17
+E1L14_adder_eqn = ( !Abs_num[4] ) + ( E1L12 ) + ( E1L11 );
+E1L14 = SUM(E1L14_adder_eqn);
+
+--E1L15 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[3]~18
+E1L15_adder_eqn = ( !Abs_num[4] ) + ( E1L12 ) + ( E1L11 );
+E1L15 = CARRY(E1L15_adder_eqn);
+
+--E1L16 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[3]~19
+E1L16_share_eqn = Abs_num[4];
+E1L16 = SHARE(E1L16_share_eqn);
+
+
+--E1L52 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~18
+E1L52_adder_eqn = ( (E1L77) # (E1L76) ) + ( VCC ) + ( E1L56 );
+E1L52 = CARRY(E1L52_adder_eqn);
+
+
+--H1L74 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~21
+H1L74_adder_eqn = ( (!L1L34 & (((L1L46)))) # (L1L34 & (((L1L76)) # (L1L75))) ) + ( VCC ) + ( H1L79 );
+H1L74 = SUM(H1L74_adder_eqn);
+
+--H1L75 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~22
+H1L75_adder_eqn = ( (!L1L34 & (((L1L46)))) # (L1L34 & (((L1L76)) # (L1L75))) ) + ( VCC ) + ( H1L79 );
+H1L75 = CARRY(H1L75_adder_eqn);
+
+
+--H1L98 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~17
+H1L98_adder_eqn = ( (!H1L54 & (((H1L74)))) # (H1L54 & (((L1L89)) # (L1L88))) ) + ( GND ) + ( H1L103 );
+H1L98 = SUM(H1L98_adder_eqn);
+
+--H1L99 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~18
+H1L99_adder_eqn = ( (!H1L54 & (((H1L74)))) # (H1L54 & (((L1L89)) # (L1L88))) ) + ( GND ) + ( H1L103 );
+H1L99 = CARRY(H1L99_adder_eqn);
+
+
+--H1L51 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26
+H1L51_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+H1L51 = CARRY(H1L51_adder_eqn);
+
+
+--H1L127 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_8~18
+H1L127_adder_eqn = ( (!H1L82 & (((H1L102)))) # (H1L82 & (((L1L87)) # (L1L86))) ) + ( GND ) + ( H1L131 );
+H1L127 = CARRY(H1L127_adder_eqn);
+
+
+--L2L14 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~13
+L2L14_adder_eqn = ( (!L1L34 & ((L1L66))) # (L1L34 & (L1L81)) ) + ( GND ) + ( L2L19 );
+L2L14 = SUM(L2L14_adder_eqn);
+
+--L2L15 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~14
+L2L15_adder_eqn = ( (!L1L34 & ((L1L66))) # (L1L34 & (L1L81)) ) + ( GND ) + ( L2L19 );
+L2L15 = CARRY(L2L15_adder_eqn);
+
+
+--L2L159 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~38
+L2L159_adder_eqn = ( (!L2L86 & (((L2L118)))) # (L2L86 & (((L2L178)) # (L2L177))) ) + ( VCC ) + ( L2L139 );
+L2L159 = CARRY(L2L159_adder_eqn);
+
+
+--L2L118 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~33
+L2L118_adder_eqn = ( (!L2L54 & ((L2L82))) # (L2L54 & (L2L169)) ) + ( GND ) + ( L2L99 );
+L2L118 = SUM(L2L118_adder_eqn);
+
+--L2L119 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~34
+L2L119_adder_eqn = ( (!L2L54 & ((L2L82))) # (L2L54 & (L2L169)) ) + ( GND ) + ( L2L99 );
+L2L119 = CARRY(L2L119_adder_eqn);
+
+
+--L2L82 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~29
+L2L82_adder_eqn = ( (!L2L26 & ((L2L50))) # (L2L26 & (L2L161)) ) + ( VCC ) + ( L2L63 );
+L2L82 = SUM(L2L82_adder_eqn);
+
+--L2L83 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~30
+L2L83_adder_eqn = ( (!L2L26 & ((L2L50))) # (L2L26 & (L2L161)) ) + ( VCC ) + ( L2L63 );
+L2L83 = CARRY(L2L83_adder_eqn);
+
+
+--L2L50 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~25
+L2L50_adder_eqn = ( L2L161 ) + ( GND ) + ( L2L31 );
+L2L50 = SUM(L2L50_adder_eqn);
+
+--L2L51 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~26
+L2L51_adder_eqn = ( L2L161 ) + ( GND ) + ( L2L31 );
+L2L51 = CARRY(L2L51_adder_eqn);
+
+
+--E1L10 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[2]~21
+E1L10_adder_eqn = ( Abs_num[3] ) + ( E1L8 ) + ( E1L7 );
+E1L10 = SUM(E1L10_adder_eqn);
+
+--E1L11 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[2]~22
+E1L11_adder_eqn = ( Abs_num[3] ) + ( E1L8 ) + ( E1L7 );
+E1L11 = CARRY(E1L11_adder_eqn);
+
+--E1L12 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[2]~23
+E1L12_share_eqn = GND;
+E1L12 = SHARE(E1L12_share_eqn);
+
+
+--E1L56 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~22
+E1L56_adder_eqn = ( (!E1L30 & ((E1L10))) # (E1L30 & (Abs_num[3])) ) + ( VCC ) + ( E1L60 );
+E1L56 = CARRY(E1L56_adder_eqn);
+
+
+--H1L79 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~26
+H1L79_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+H1L79 = CARRY(H1L79_adder_eqn);
+
+
+--H1L102 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~21
+H1L102_adder_eqn = ( (!L1L34 & (((L1L42)))) # (L1L34 & (((L1L74)) # (L1L73))) ) + ( VCC ) + ( H1L107 );
+H1L102 = SUM(H1L102_adder_eqn);
+
+--H1L103 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~22
+H1L103_adder_eqn = ( (!L1L34 & (((L1L42)))) # (L1L34 & (((L1L74)) # (L1L73))) ) + ( VCC ) + ( H1L107 );
+H1L103 = CARRY(H1L103_adder_eqn);
+
+
+--H1L131 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_8~22
+H1L131_adder_eqn = ( (!L1L34 & ((L1L38))) # (L1L34 & (Abs_num[0])) ) + ( VCC ) + ( H1L135 );
+H1L131 = CARRY(H1L131_adder_eqn);
+
+
+--L2L18 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~17
+L2L18_adder_eqn = ( (!L1L34 & (((L1L62)))) # (L1L34 & (((L1L80)) # (L1L79))) ) + ( VCC ) + ( L2L23 );
+L2L18 = SUM(L2L18_adder_eqn);
+
+--L2L19 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~18
+L2L19_adder_eqn = ( (!L1L34 & (((L1L62)))) # (L1L34 & (((L1L80)) # (L1L79))) ) + ( VCC ) + ( L2L23 );
+L2L19 = CARRY(L2L19_adder_eqn);
+
+
+--E1L6 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[1]~25
+E1L6_adder_eqn = ( !Abs_num[2] ) + ( E1L4 ) + ( E1L3 );
+E1L6 = SUM(E1L6_adder_eqn);
+
+--E1L7 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[1]~26
+E1L7_adder_eqn = ( !Abs_num[2] ) + ( E1L4 ) + ( E1L3 );
+E1L7 = CARRY(E1L7_adder_eqn);
+
+--E1L8 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[1]~27
+E1L8_share_eqn = Abs_num[2];
+E1L8 = SHARE(E1L8_share_eqn);
+
+
+--E1L60 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~26
+E1L60_adder_eqn = ( (E1L75) # (E1L74) ) + ( GND ) + ( E1L64 );
+E1L60 = CARRY(E1L60_adder_eqn);
+
+
+--H1L107 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_7~26
+H1L107_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+H1L107 = CARRY(H1L107_adder_eqn);
+
+
+--H1L135 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_8~26
+H1L135_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+H1L135 = CARRY(H1L135_adder_eqn);
+
+
+--L2L23 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~22
+L2L23_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+L2L23 = CARRY(L2L23_adder_eqn);
+
+
+--E1L2 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[0]~29
+E1L2_adder_eqn = ( Abs_num[1] ) + ( !VCC ) + ( !VCC );
+E1L2 = SUM(E1L2_adder_eqn);
+
+--E1L3 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[0]~30
+E1L3_adder_eqn = ( Abs_num[1] ) + ( !VCC ) + ( !VCC );
+E1L3 = CARRY(E1L3_adder_eqn);
+
+--E1L4 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|add_sub_6_result_int[0]~31
+E1L4_share_eqn = VCC;
+E1L4 = SHARE(E1L4_share_eqn);
+
+
+--E1L64 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~30
+E1L64_adder_eqn = ( (!E1L30 & ((E1L2))) # (E1L30 & (Abs_num[1])) ) + ( VCC ) + ( E1L68 );
+E1L64 = CARRY(E1L64_adder_eqn);
+
+
+--E1L68 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~34
+E1L68_adder_eqn = ( Abs_num[0] ) + ( VCC ) + ( E1L72 );
+E1L68 = CARRY(E1L68_adder_eqn);
+
+
+--E1L72 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~38
+E1L72_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+E1L72 = CARRY(E1L72_adder_eqn);
+
+
+--HEX2[0] is HEX2[0]
+HEX2[0] = OUTPUT(A1L36);
+
+
+--HEX2[1] is HEX2[1]
+HEX2[1] = OUTPUT(A1L53);
+
+
+--HEX2[2] is HEX2[2]
+HEX2[2] = OUTPUT(A1L35);
+
+
+--HEX2[3] is HEX2[3]
+HEX2[3] = OUTPUT(A1L36);
+
+
+--HEX2[4] is HEX2[4]
+HEX2[4] = OUTPUT(E1L35);
+
+
+--HEX2[5] is HEX2[5]
+HEX2[5] = OUTPUT(A1L34);
+
+
+--HEX2[6] is HEX2[6]
+HEX2[6] = OUTPUT(E1L30);
+
+
+--HEX1[0] is HEX1[0]
+HEX1[0] = OUTPUT(A1L44);
+
+
+--HEX1[1] is HEX1[1]
+HEX1[1] = OUTPUT(A1L43);
+
+
+--HEX1[2] is HEX1[2]
+HEX1[2] = OUTPUT(A1L42);
+
+
+--HEX1[3] is HEX1[3]
+HEX1[3] = OUTPUT(A1L41);
+
+
+--HEX1[4] is HEX1[4]
+HEX1[4] = OUTPUT(A1L40);
+
+
+--HEX1[5] is HEX1[5]
+HEX1[5] = OUTPUT(A1L39);
+
+
+--HEX1[6] is HEX1[6]
+HEX1[6] = OUTPUT(A1L38);
+
+
+--HEX3[0] is HEX3[0]
+HEX3[0] = OUTPUT(A1L52);
+
+
+--HEX3[1] is HEX3[1]
+HEX3[1] = OUTPUT(A1L51);
+
+
+--HEX3[2] is HEX3[2]
+HEX3[2] = OUTPUT(A1L50);
+
+
+--HEX3[3] is HEX3[3]
+HEX3[3] = OUTPUT(A1L49);
+
+
+--HEX3[4] is HEX3[4]
+HEX3[4] = OUTPUT(A1L48);
+
+
+--HEX3[5] is HEX3[5]
+HEX3[5] = OUTPUT(A1L47);
+
+
+--HEX3[6] is HEX3[6]
+HEX3[6] = OUTPUT(A1L46);
+
+
+--A1L36 is Mux6~0
+A1L36 = (E1L30 & !E1L34);
+
+
+--A1L35 is Mux4~0
+A1L35 = (!E1L30 & E1L34);
+
+
+--A1L34 is Mux1~0
+A1L34 = (!E1L30) # (!E1L34);
+
+
+--A1L44 is Mux13~0
+A1L44 = (!H1L82 & (((!H1L26)))) # (H1L82 & (!H1L54 $ (((!H1L110 & H1L26)))));
+
+
+--A1L43 is Mux12~0
+A1L43 = (!H1L54 & ((!H1L26) # (!H1L110 $ (!H1L82)))) # (H1L54 & (((!H1L82 & !H1L26))));
+
+
+--A1L42 is Mux11~0
+A1L42 = (!H1L54 & (((!H1L26)))) # (H1L54 & (!H1L82 & ((!H1L26) # (H1L110))));
+
+
+--A1L41 is Mux10~0
+A1L41 = (!H1L82 & ((!H1L26) # ((!H1L110 & !H1L54)))) # (H1L82 & (!H1L54 $ (((!H1L110 & H1L26)))));
+
+
+--A1L40 is Mux9~0
+A1L40 = (!H1L110) # ((!H1L82 & ((!H1L26))) # (H1L82 & (!H1L54)));
+
+
+--A1L39 is Mux8~0
+A1L39 = (!H1L110 & ((!H1L82) # (!H1L54 $ (H1L26)))) # (H1L110 & ((!H1L54 & ((!H1L26))) # (H1L54 & (!H1L82))));
+
+
+--A1L37 is Mux7~0
+A1L37 = (!H1L82 & (H1L26 & ((H1L54) # (H1L110)))) # (H1L82 & ((!H1L54 $ (!H1L26))));
+
+
+--Abs_num[0] is Abs_num[0]
+Abs_num[0] = INPUT();
+
+
+--L2L184 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[56]~0
+L2L184 = ( L2L126 & ( (!L1L34 & ((L1L38))) # (L1L34 & (Abs_num[0])) ) ) # ( !L2L126 & ( L2L122 ) );
+
+
+--L1L73 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[48]~0
+L1L73 = (!L1L30 & L1L2);
+
+
+--Abs_num[1] is Abs_num[1]
+Abs_num[1] = INPUT();
+
+
+--L1L74 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[48]~1
+L1L74 = (Abs_num[1] & L1L30);
+
+
+--L1L86 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[57]~2
+L1L86 = (L1L34 & ((L1L74) # (L1L73)));
+
+
+--L1L87 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[57]~3
+L1L87 = (!L1L34 & L1L42);
+
+
+--L2L185 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[57]~1
+L2L185 = ( L2L126 & ( L2L130 & ( (!L2L86 & (((!L2L90)))) # (L2L86 & (!L1L86 & (!L1L87))) ) ) ) # ( L2L126 & ( !L2L130 & ( (!L2L86 & (((!L2L90)))) # (L2L86 & (!L1L86 & (!L1L87))) ) ) ) # ( !L2L126 & ( !L2L130 ) );
+
+
+--L1L75 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[49]~4
+L1L75 = (!L1L30 & L1L6);
+
+
+--Abs_num[2] is Abs_num[2]
+Abs_num[2] = INPUT();
+
+
+--L1L76 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[49]~5
+L1L76 = (Abs_num[2] & L1L30);
+
+
+--L1L88 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[58]~6
+L1L88 = (L1L34 & ((L1L76) # (L1L75)));
+
+
+--L1L89 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[58]~7
+L1L89 = (!L1L34 & L1L46);
+
+
+--L2L175 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[40]~2
+L2L175 = (!L2L54 & (((L2L58)))) # (L2L54 & (((L1L89)) # (L1L88)));
+
+
+--L2L186 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[58]~3
+L2L186 = ( L2L134 & ( (!L2L126) # ((!L2L86 & ((L2L94))) # (L2L86 & (L2L175))) ) ) # ( !L2L134 & ( (L2L126 & ((!L2L86 & ((L2L94))) # (L2L86 & (L2L175)))) ) );
+
+
+--L1L77 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[50]~8
+L1L77 = (!L1L30 & L1L10);
+
+
+--Abs_num[3] is Abs_num[3]
+Abs_num[3] = INPUT();
+
+
+--L1L78 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[50]~9
+L1L78 = (Abs_num[3] & L1L30);
+
+
+--L1L90 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[59]~10
+L1L90 = (L1L34 & ((L1L78) # (L1L77)));
+
+
+--L1L91 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[59]~11
+L1L91 = (!L1L34 & L1L50);
+
+
+--L2L168 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[32]~4
+L2L168 = (!L2L26 & (((L2L30)))) # (L2L26 & (((L1L91)) # (L1L90)));
+
+
+--L2L176 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[41]~5
+L2L176 = (!L2L54 & ((L2L62))) # (L2L54 & (L2L168));
+
+
+--L2L187 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[59]~6
+L2L187 = ( L2L138 & ( (!L2L126) # ((!L2L86 & ((L2L98))) # (L2L86 & (L2L176))) ) ) # ( !L2L138 & ( (L2L126 & ((!L2L86 & ((L2L98))) # (L2L86 & (L2L176)))) ) );
+
+
+--A1L52 is Mux20~0
+A1L52 = (!L2L185 & (((L2L187)))) # (L2L185 & (!L2L186 $ (((!L2L184) # (L2L187)))));
+
+
+--A1L51 is Mux19~0
+A1L51 = (!L2L186 & (((!L2L185 & L2L187)))) # (L2L186 & ((!L2L184 $ (L2L185)) # (L2L187)));
+
+
+--A1L50 is Mux18~0
+A1L50 = (!L2L186 & (!L2L185 & ((!L2L184) # (L2L187)))) # (L2L186 & (((L2L187))));
+
+
+--A1L49 is Mux17~0
+A1L49 = (!L2L185 & (((L2L184 & L2L186)) # (L2L187))) # (L2L185 & (!L2L186 $ (((!L2L184) # (L2L187)))));
+
+
+--A1L48 is Mux16~0
+A1L48 = ((!L2L185 & ((L2L187))) # (L2L185 & (L2L186))) # (L2L184);
+
+
+--A1L47 is Mux15~0
+A1L47 = (!L2L184 & ((!L2L186 & (!L2L185)) # (L2L186 & ((L2L187))))) # (L2L184 & ((!L2L185) # (!L2L186 $ (L2L187))));
+
+
+--A1L45 is Mux14~0
+A1L45 = (!L2L185 & (!L2L187 & ((!L2L184) # (!L2L186)))) # (L2L185 & ((!L2L186 $ (!L2L187))));
+
+
+--Abs_num[7] is Abs_num[7]
+Abs_num[7] = INPUT();
+
+
+--H1L148 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[27]~0
+H1L148 = (!H1L54 & H1L62);
+
+
+--L1L79 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[51]~12
+L1L79 = (!L1L30 & L1L14);
+
+
+--Abs_num[4] is Abs_num[4]
+Abs_num[4] = INPUT();
+
+
+--L1L80 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[51]~13
+L1L80 = (Abs_num[4] & L1L30);
+
+
+--L1L92 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[60]~14
+L1L92 = (!L1L34 & (((!L1L62)))) # (L1L34 & (!L1L79 & ((!L1L80))));
+
+
+--H1L137 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[15]~1
+H1L137 = (!H1L2 & ((H1L6))) # (H1L2 & (!L1L92));
+
+
+--H1L143 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~2
+H1L143 = (!H1L26 & ((H1L34))) # (H1L26 & (H1L137));
+
+
+--H1L149 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[27]~3
+H1L149 = (H1L54 & H1L143);
+
+
+--H1L144 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[22]~4
+H1L144 = (!H1L26 & H1L38);
+
+
+--Abs_num[5] is Abs_num[5]
+Abs_num[5] = INPUT();
+
+
+--L1L81 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[52]~15
+L1L81 = (!L1L30 & ((L1L18))) # (L1L30 & (Abs_num[5]));
+
+
+--L1L93 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[61]~16
+L1L93 = (L1L34 & L1L81);
+
+
+--L1L94 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[61]~17
+L1L94 = (!L1L34 & L1L66);
+
+
+--H1L138 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[16]~5
+H1L138 = (!H1L2 & (((H1L10)))) # (H1L2 & (((L1L94)) # (L1L93)));
+
+
+--H1L145 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[22]~6
+H1L145 = (H1L26 & H1L138);
+
+
+--H1L139 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[17]~7
+H1L139 = (!H1L2 & H1L14);
+
+
+--L1L82 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[53]~18
+L1L82 = (!L1L30 & L1L22);
+
+
+--Abs_num[6] is Abs_num[6]
+Abs_num[6] = INPUT();
+
+
+--L1L83 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[53]~19
+L1L83 = (Abs_num[6] & L1L30);
+
+
+--L1L95 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[62]~20
+L1L95 = (!L1L34 & (((!L1L70)))) # (L1L34 & (!L1L82 & ((!L1L83))));
+
+
+--H1L140 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[17]~8
+H1L140 = (H1L2 & !L1L95);
+
+
+--L1L84 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[54]~21
+L1L84 = (Abs_num[7] & L1L30);
+
+
+--L1L85 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[54]~22
+L1L85 = (!L1L30 & L1L26);
+
+
+--L1L96 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[63]~23
+L1L96 = (L1L34 & ((L1L85) # (L1L84)));
+
+
+--L1L97 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[63]~24
+L1L97 = (!L1L34 & L1L54);
+
+
+--L2L182 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[45]~7
+L2L182 = (!L2L54 & L2L66);
+
+
+--L2L173 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[36]~8
+L2L173 = (!L2L26 & L2L34);
+
+
+--L2L166 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[27]~9
+L2L166 = (!L2L2 & L2L6);
+
+
+--L2L167 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[27]~10
+L2L167 = (L2L2 & ((L1L97) # (L1L96)));
+
+
+--L2L174 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[36]~11
+L2L174 = (L2L26 & ((L2L167) # (L2L166)));
+
+
+--L2L183 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[45]~12
+L2L183 = (L2L54 & ((L2L174) # (L2L173)));
+
+
+--E1L78 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|StageOut[53]~0
+E1L78 = (!E1L30 & E1L22);
+
+
+--E1L79 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|StageOut[53]~1
+E1L79 = (Abs_num[6] & E1L30);
+
+
+--H1L142 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~9
+H1L142 = (!H1L26 & (((H1L46)))) # (H1L26 & (((L1L91)) # (L1L90)));
+
+
+--H1L147 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[26]~10
+H1L147 = (!H1L54 & ((H1L70))) # (H1L54 & (H1L142));
+
+
+--H1L141 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[17]~11
+H1L141 = (!H1L2 & ((H1L14))) # (H1L2 & (!L1L95));
+
+
+--L2L180 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[44]~13
+L2L180 = (!L2L54 & L2L74);
+
+
+--L2L163 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[26]~14
+L2L163 = (!L2L2 & ((L2L10))) # (L2L2 & (!L1L95));
+
+
+--L2L172 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[35]~15
+L2L172 = (!L2L26 & ((L2L42))) # (L2L26 & (L2L163));
+
+
+--L2L181 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[44]~16
+L2L181 = (L2L54 & L2L172);
+
+
+--L2L164 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[26]~17
+L2L164 = (!L2L2 & L2L10);
+
+
+--L2L165 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[26]~18
+L2L165 = (!L1L95 & L2L2);
+
+
+--H1L146 is lpm_divide:Div1|lpm_divide_5am:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[25]~12
+H1L146 = (!H1L54 & (((H1L74)))) # (H1L54 & (((L1L89)) # (L1L88)));
+
+
+--L2L170 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[34]~19
+L2L170 = (!L2L26 & L2L46);
+
+
+--L2L162 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[25]~20
+L2L162 = (!L2L2 & (((L2L14)))) # (L2L2 & (((L1L94)) # (L1L93)));
+
+
+--L2L171 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[34]~21
+L2L171 = (L2L26 & L2L162);
+
+
+--L2L179 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[43]~22
+L2L179 = (!L2L54 & (((L2L78)))) # (L2L54 & (((L2L171)) # (L2L170)));
+
+
+--E1L76 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|StageOut[51]~2
+E1L76 = (!E1L30 & E1L14);
+
+
+--E1L77 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|StageOut[51]~3
+E1L77 = (Abs_num[4] & E1L30);
+
+
+--L2L177 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[42]~23
+L2L177 = (!L2L54 & L2L82);
+
+
+--L2L161 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[24]~24
+L2L161 = (!L2L2 & ((L2L18))) # (L2L2 & (!L1L92));
+
+
+--L2L169 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[33]~25
+L2L169 = (!L2L26 & ((L2L50))) # (L2L26 & (L2L161));
+
+
+--L2L178 is lpm_divide:Mod1|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[42]~26
+L2L178 = (L2L54 & L2L169);
+
+
+--E1L74 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|StageOut[49]~4
+E1L74 = (!E1L30 & E1L6);
+
+
+--E1L75 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|StageOut[49]~5
+E1L75 = (Abs_num[2] & E1L30);
+
+
+--A1L53 is ~GND
+A1L53 = GND;
+
+
+--A1L46 is Mux14~0_wirecell
+A1L46 = !A1L45;
+
+
+--A1L38 is Mux7~0_wirecell
+A1L38 = !A1L37;
+
+
+--E1L35 is lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_2te:divider|op_8~1_wirecell
+E1L35 = !E1L34;
+
+

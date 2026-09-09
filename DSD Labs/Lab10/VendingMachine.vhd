@@ -1,0 +1,224 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity VendingMachine is
+    port (
+        clk, reset_n       : in std_logic;
+        nickel_in, dime_in, quarter_in : in std_logic;
+        Dispense_in, Coin_Return : in std_logic;
+        RedBull_out, change_back : out std_logic;
+        HEX0, HEX1 : out std_logic_vector(6 downto 0)  
+    );
+end VendingMachine;
+
+architecture behave of VendingMachine is
+
+    type state_type is (wait1, nickel, dime, quarter, enough, excess, vend, change);
+    signal current_state, next_state : state_type;
+  signal money : unsigned(7 downto 0);
+
+
+
+signal  tens: STD_LOGIC_VECTOR(7 downto 0);
+signal ones : STD_LOGIC_VECTOR(7 downto 0):= x"00";
+
+ 
+constant n0 : STD_LOGIC_VECTOR(6 downto 0) := "1000000";
+constant n1 : STD_LOGIC_VECTOR(6 downto 0) := "1111001";
+constant n2 : STD_LOGIC_VECTOR(6 downto 0) := "0100100";
+constant n3 : STD_LOGIC_VECTOR(6 downto 0) := "0110000";
+constant n4 : STD_LOGIC_VECTOR(6 downto 0) := "0011001";
+constant n5 : STD_LOGIC_VECTOR(6 downto 0) := "0010010";
+constant n6 : STD_LOGIC_VECTOR(6 downto 0) := "0000010";
+constant n7 : STD_LOGIC_VECTOR(6 downto 0) := "1111000";
+constant n8 : STD_LOGIC_VECTOR(6 downto 0) := "0000000";
+constant n9 : STD_LOGIC_VECTOR(6 downto 0) := "0011000";
+constant blank : STD_LOGIC_VECTOR(6 downto 0) :="1111111";
+
+
+
+begin
+
+    process(clk, reset_n)
+    begin
+        if (reset_n = '0') then
+            current_state <= wait1 ;
+        elsif rising_edge(clk) then
+            current_state <= next_state;
+end if;
+end process;
+
+    -- Clocked process: update $$$$$$$$$$$$$$$$$$$$
+    process(clk, reset_n, money)
+    begin
+        if reset_n = '0' then
+            money <= "00000000" ;
+        elsif rising_edge(clk) then
+           
+
+      case current_state is
+                when wait1 =>
+money <= money;
+
+                    when nickel =>
+
+                        money <= (unsigned(money) + 5);
+                    when dime =>
+                        money <= (unsigned(money) + 10);
+                    when quarter =>
+                        money <= (unsigned(money) + 25);
+
+              when vend  =>
+money  <= (unsigned(money) - 75);
+when change =>
+money <= "00000000";
+   
+ 
+ when excess =>
+money <= money;
+                   when enough =>
+money <= money;
+           
+
+end case;
+
+
+end if;
+
+    end process;
+    -- Combinational next_state logic
+    process(current_state, nickel_in, dime_in, quarter_in, Dispense_in, coin_return, money)
+    begin
+        case current_state is
+            when wait1 =>
+                if unsigned(money) >= 75 then
+                    next_state <= enough;
+                elsif nickel_in = '1' then
+                    next_state <= nickel;
+                elsif dime_in = '1' then
+                    next_state <= dime;
+                elsif quarter_in = '1' then
+                    next_state <= quarter;
+                else
+                    next_state <= wait1;
+                end if;
+
+         when nickel =>
+                if unsigned(money) >= 75 then
+                    next_state <= enough;
+                else
+                    next_state <= wait1;
+                end if;
+
+        when dime =>
+                if unsigned(money) >= 75 then
+                    next_state <= enough;
+                else
+                    next_state <= wait1;
+                end if;
+
+        when quarter =>
+                if unsigned(money) >= 75 then
+                    next_state <= enough;
+                else
+                    next_state <= wait1;
+                end if;
+
+        when enough =>
+               if Dispense_in = '1' then
+                    next_state <= vend;
+                elsif coin_return = '1' then
+                    next_state <= change;
+                else
+                    next_state <= excess;
+                end if;
+
+        when excess =>
+                if Dispense_in = '1' then
+                    next_state <= vend;
+                elsif coin_return = '1' then
+                    next_state <= change;
+                else
+                    next_state <= excess;
+                end if;
+
+            when vend =>
+                next_state <= change;
+
+            when change =>
+                next_state <= wait1;
+
+            when others =>
+                next_state <= wait1;
+
+        end case;
+    end process;
+
+
+tens <= std_logic_vector(unsigned(money) / 10 );
+ones <= std_logic_vector(unsigned(money) rem 10 );
+
+
+
+
+
+process(tens) begin
+case tens is
+WHEN x"00" => HEX1 <= n0;
+WHEN x"01" => HEX1  <= n1;
+WHEN x"02" => HEX1  <= n2;
+WHEN x"03" => HEX1  <= n3;
+WHEN x"04" => HEX1  <= n4;
+WHEN x"05" => HEX1  <= n5;
+WHEN x"06" => HEX1  <= n6;
+WHEN x"07" => HEX1  <= n7;
+WHEN x"08" => HEX1  <= n8;
+WHEN x"09" => HEX1  <= n9;
+WHEN others => HEX1  <= blank;
+end case;
+end process;
+
+
+
+
+process(ones) begin
+case ones is
+WHEN x"00" => HEX0 <= n0;
+WHEN x"01" => HEX0  <= n1;
+WHEN x"02" => HEX0  <= n2;
+WHEN x"03" => HEX0  <= n3;
+WHEN x"04" => HEX0  <= n4;
+WHEN x"05" => HEX0  <= n5;
+WHEN x"06" => HEX0  <= n6;
+WHEN x"07" => HEX0  <= n7;
+WHEN x"08" => HEX0  <= n8;
+WHEN x"09" => HEX0  <= n9;
+WHEN others => HEX0  <= blank;
+end case;
+end process;
+
+
+
+
+
+    -- RedBull output
+    process(current_state)
+    begin
+        if current_state = vend then
+            RedBull_out <= '1';
+        else
+            RedBull_out <= '0';
+        end if;
+    end process;
+
+    -- Change_back output (Moore)
+    process(current_state)
+    begin
+        if current_state = change then
+            change_back <= '1';
+        else
+            change_back <= '0';
+        end if;
+    end process;
+end behave; 

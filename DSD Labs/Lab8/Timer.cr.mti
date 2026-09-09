@@ -1,0 +1,38 @@
+S:/CPET_DSD_LAB/Lab8/Mux1.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_DSD_LAB/Lab8/Mux1.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux1
+-- Compiling architecture LOGICFUNCTION of Mux1
+
+} {} {}} S:/CPET_DSD_LAB/Lab8/Counter.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_DSD_LAB/Lab8/Counter.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter
+-- Compiling architecture LOGICFUNCTION of counter
+
+} {} {}} S:/CPET_DSD_LAB/Lab8/delay_unit.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_DSD_LAB/Lab8/delay_unit.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity delay_unit
+-- Compiling architecture LOGICFUNCTION of delay_unit
+
+} {} {}} S:/CPET_DSD_LAB/Lab8/timer_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_DSD_LAB/Lab8/timer_tb.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity timer_tb
+-- Compiling architecture test of timer_tb
+
+} {} {}}

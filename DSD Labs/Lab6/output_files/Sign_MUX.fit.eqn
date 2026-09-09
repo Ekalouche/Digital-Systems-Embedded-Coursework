@@ -1,0 +1,121 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+--in_num[0] is in_num[0] at PIN_L17
+in_num[0] = INPUT();
+
+
+
+--in_num[1] is in_num[1] at PIN_H14
+in_num[1] = INPUT();
+
+
+
+--in_num[2] is in_num[2] at PIN_M6
+in_num[2] = INPUT();
+
+
+
+--in_num[3] is in_num[3] at PIN_Y22
+in_num[3] = INPUT();
+
+
+
+--in_num[4] is in_num[4] at PIN_U6
+in_num[4] = INPUT();
+
+
+
+--in_num[5] is in_num[5] at PIN_L18
+in_num[5] = INPUT();
+
+
+
+--in_num[6] is in_num[6] at PIN_B18
+in_num[6] = INPUT();
+
+
+--A1L4 is HEX3[0]~output at IOOBUF_X68_Y0_N36
+A1L4 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[0] is HEX3[0] at PIN_W21
+HEX3[0] = OUTPUT();
+
+
+--A1L6 is HEX3[1]~output at IOOBUF_X74_Y81_N93
+A1L6 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[1] is HEX3[1] at PIN_A19
+HEX3[1] = OUTPUT();
+
+
+--A1L8 is HEX3[2]~output at IOOBUF_X89_Y4_N62
+A1L8 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[2] is HEX3[2] at PIN_T17
+HEX3[2] = OUTPUT();
+
+
+--A1L10 is HEX3[3]~output at IOOBUF_X89_Y8_N39
+A1L10 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[3] is HEX3[3] at PIN_R21
+HEX3[3] = OUTPUT();
+
+
+--A1L12 is HEX3[4]~output at IOOBUF_X38_Y81_N19
+A1L12 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[4] is HEX3[4] at PIN_J8
+HEX3[4] = OUTPUT();
+
+
+--A1L14 is HEX3[5]~output at IOOBUF_X68_Y81_N2
+A1L14 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[5] is HEX3[5] at PIN_G18
+HEX3[5] = OUTPUT();
+
+
+--A1L16 is HEX3[6]~output at IOOBUF_X34_Y81_N42
+A1L16 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[6] is HEX3[6] at PIN_B10
+HEX3[6] = OUTPUT();
+
+
+--A1L18 is HEX3[7]~output at IOOBUF_X28_Y81_N36
+A1L18 = OUTPUT_BUFFER.O(.I(!A1L35), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3[7] is HEX3[7] at PIN_D7
+HEX3[7] = OUTPUT();
+
+
+--A1L35 is in_num[7]~input at IOIBUF_X28_Y81_N18
+A1L35 = INPUT_BUFFER(.I(in_num[7]), );
+
+
+--in_num[7] is in_num[7] at PIN_D9
+in_num[7] = INPUT();
+
+
+

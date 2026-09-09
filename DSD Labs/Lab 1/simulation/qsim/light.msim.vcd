@@ -1,0 +1,83 @@
+$comment
+	File created using the following command:
+		vcd file light.msim.vcd -direction
+$end
+$date
+	Tue Aug 26 18:56:23 2025
+$end
+$version
+	ModelSim Version 2019.2
+$end
+$timescale
+	1ps
+$end
+
+$scope module light_vhd_vec_tst $end
+$var wire 1 ! F $end
+$var wire 1 " X1 $end
+$var wire 1 # X2 $end
+
+$scope module i1 $end
+$var wire 1 $ gnd $end
+$var wire 1 % vcc $end
+$var wire 1 & unknown $end
+$var wire 1 ' devoe $end
+$var wire 1 ( devclrn $end
+$var wire 1 ) devpor $end
+$var wire 1 * ww_devoe $end
+$var wire 1 + ww_devclrn $end
+$var wire 1 , ww_devpor $end
+$var wire 1 - ww_F $end
+$var wire 1 . ww_X1 $end
+$var wire 1 / ww_X2 $end
+$var wire 1 0 \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 1 \X1~input_o\ $end
+$var wire 1 2 \X2~input_o\ $end
+$var wire 1 3 \inst7~0_combout\ $end
+$var wire 1 4 \ALT_INV_X2~input_o\ $end
+$var wire 1 5 \ALT_INV_X1~input_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+1%
+x&
+1'
+1(
+1)
+1*
+1+
+1,
+0-
+0.
+0/
+x0
+01
+02
+03
+14
+15
+$end
+#40000
+1"
+1.
+11
+05
+13
+1-
+1!
+#80000
+0"
+1#
+0.
+1/
+12
+01
+04
+15
+#200000

@@ -1,0 +1,19 @@
+|Sign_MUX
+in_num[0] => ~NO_FANOUT~
+in_num[1] => ~NO_FANOUT~
+in_num[2] => ~NO_FANOUT~
+in_num[3] => ~NO_FANOUT~
+in_num[4] => ~NO_FANOUT~
+in_num[5] => ~NO_FANOUT~
+in_num[6] => ~NO_FANOUT~
+in_num[7] => HEX3[7].DATAIN
+HEX3[0] <= <VCC>
+HEX3[1] <= <VCC>
+HEX3[2] <= <VCC>
+HEX3[3] <= <VCC>
+HEX3[4] <= <VCC>
+HEX3[5] <= <VCC>
+HEX3[6] <= <VCC>
+HEX3[7] <= in_num[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

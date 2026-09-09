@@ -1,0 +1,40 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY Delay_Unit IS
+    PORT (
+        max_value : IN STD_LOGIC_VECTOR(7 downto 0);
+		  clk : IN STD_Logic
+		  reset_n : IN STD_Logic
+        flag   : OUT STD_LOGIC_VECTOR(6 downto 0)
+    );
+END Delay_Unit;
+
+ARCHITECTURE LOGICFUNCTION OF Delay_Unit IS
+
+	SIGNAL int_count : UNSIGNED(3 downto 0);
+	
+BEGIN
+	PROCESS(clk, reset_n)
+		BEGIN
+			IF (reset_n = ‘0’) THEN
+			count <= (other => '0');
+			elsif (clk' event and clk = '1') then
+			if (cont = max_value) then --Stop when you reaches the max value
+				count <= (other => '0'); 
+			else
+				count <= count +1;
+				end if;
+			end if;
+		end process;
+	PROCESS(clk, reset_n) IS
+	
+	BEGIN
+		if reset_n = '0')
+			flag <= '1';
+		else
+			flag <= '0';
+		end if;
+	end if;
+end process;
+END LOGICFUNCTION;

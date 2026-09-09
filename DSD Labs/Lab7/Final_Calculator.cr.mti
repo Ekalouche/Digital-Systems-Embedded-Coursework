@@ -1,0 +1,55 @@
+S:/CPET_DSD_LAB/Lab7/CalculatorDisplay.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_DSD_LAB/Lab7/CalculatorDisplay.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity CalculatorDisplay
+-- Compiling architecture Structure of CalculatorDisplay
+
+} {} {}} S:/CPET_DSD_LAB/Lab7/Full_calculator_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {S:\CPET_DSD_LAB\Lab7\Full_calculator_tb.vhd}
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Full_Calculator_tb
+-- Compiling architecture test of Full_Calculator_tb
+
+} {} {}} S:/CPET_DSD_LAB/Lab7/Displayer.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_DSD_LAB/Lab7/Displayer.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Displayer
+-- Compiling architecture LogicFunction of Displayer
+
+} {} {}} S:/CPET_DSD_LAB/Lab7/Coverter.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_DSD_LAB/Lab7/Coverter.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Coverter
+-- Compiling architecture LogicFunction of Coverter
+
+} {} {}} S:/CPET_DSD_LAB/Lab7/Sign_MUX.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_DSD_LAB/Lab7/Sign_MUX.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Sign_mux
+-- Compiling architecture LOGICFUNCTION of Sign_mux
+
+} {} {}} S:/CPET_DSD_LAB/Lab7/Final_Calculator.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {S:\CPET_DSD_LAB\Lab7\Final_Calculator.vhd}
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Final_Calculator
+-- Compiling architecture Structure of Final_Calculator
+
+} {} {}}

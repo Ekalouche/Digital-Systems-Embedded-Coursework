@@ -1,0 +1,141 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--output_case[0] is output_case[0]
+output_case[0] = OUTPUT(A1L7);
+
+
+--output_case[1] is output_case[1]
+output_case[1] = OUTPUT(A1L6);
+
+
+--output_case[2] is output_case[2]
+output_case[2] = OUTPUT(A1L5);
+
+
+--output_case[3] is output_case[3]
+output_case[3] = OUTPUT(A1L7);
+
+
+--output_case[4] is output_case[4]
+output_case[4] = OUTPUT(A1L4);
+
+
+--output_case[5] is output_case[5]
+output_case[5] = OUTPUT(A1L3);
+
+
+--output_case[6] is output_case[6]
+output_case[6] = OUTPUT(A1L2);
+
+
+--output_if[0] is output_if[0]
+output_if[0] = OUTPUT(A1L25);
+
+
+--output_if[1] is output_if[1]
+output_if[1] = OUTPUT(A1L30);
+
+
+--output_if[2] is output_if[2]
+output_if[2] = OUTPUT(A1L28);
+
+
+--output_if[3] is output_if[3]
+output_if[3] = OUTPUT(A1L25);
+
+
+--output_if[4] is output_if[4]
+output_if[4] = OUTPUT(A1L27);
+
+
+--output_if[5] is output_if[5]
+output_if[5] = OUTPUT(A1L3);
+
+
+--output_if[6] is output_if[6]
+output_if[6] = OUTPUT(A1L2);
+
+
+--Z is Z
+Z = INPUT();
+
+
+--Y is Y
+Y = INPUT();
+
+
+--X is X
+X = INPUT();
+
+
+--W is W
+W = INPUT();
+
+
+--A1L7 is Mux6~0
+A1L7 = (!X & (((Y)))) # (X & (((Z & !Y)) # (W)));
+
+
+--A1L6 is Mux5~0
+A1L6 = (!Z & ((!X & (Y)) # (X & ((W))))) # (Z & (((!Y & X)) # (W)));
+
+
+--A1L5 is Mux4~0
+A1L5 = (!Y & (X & ((W) # (Z)))) # (Y & ((!Z) # ((W))));
+
+
+--A1L4 is Mux2~0
+A1L4 = (!Y & ((!W & (Z)) # (W & ((X))))) # (Y & (((!X) # (W))));
+
+
+--A1L3 is Mux1~0
+A1L3 = (!X & (((Y)))) # (X & ((!Z $ (!Y)) # (W)));
+
+
+--A1L1 is Mux0~0
+A1L1 = (!Y & ((!X & (Z)) # (X & ((!W))))) # (Y & (!Z & ((!W))));
+
+
+--A1L24 is output_if~0
+A1L24 = (!X & (((!Y)))) # (X & (!W & ((!Z) # (Y))));
+
+
+--A1L26 is output_if~1
+A1L26 = (!Y & ((!W & (!Z)) # (W & ((!X))))) # (Y & (((X & !W))));
+
+
+--A1L28 is output_if~2
+A1L28 = (!Y & (X & ((Z) # (W)))) # (Y & (((!Z)) # (W)));
+
+
+--A1L29 is output_if~3
+A1L29 = (!X & ((!Z & ((!Y))) # (Z & (!W)))) # (X & (!W & ((!Z) # (Y))));
+
+
+--A1L2 is Mux0~0_wirecell
+A1L2 = !A1L1;
+
+
+--A1L25 is output_if~0_wirecell
+A1L25 = !A1L24;
+
+
+--A1L27 is output_if~1_wirecell
+A1L27 = !A1L26;
+
+
+--A1L30 is output_if~3_wirecell
+A1L30 = !A1L29;
+
+

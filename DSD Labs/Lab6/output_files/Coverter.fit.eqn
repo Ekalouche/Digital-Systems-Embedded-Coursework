@@ -1,0 +1,293 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--A1L27 is Add0~1 at MLABCELL_X87_Y37_N0
+A1L27_adder_eqn = ( inverted_bits[1] ) + ( inverted_bits[0] ) + ( !VCC );
+A1L27 = SUM(A1L27_adder_eqn);
+
+--A1L28 is Add0~2 at MLABCELL_X87_Y37_N0
+A1L28_adder_eqn = ( inverted_bits[1] ) + ( inverted_bits[0] ) + ( !VCC );
+A1L28 = CARRY(A1L28_adder_eqn);
+
+
+--A1L31 is Add0~5 at MLABCELL_X87_Y37_N3
+A1L31_adder_eqn = ( inverted_bits[2] ) + ( GND ) + ( A1L28 );
+A1L31 = SUM(A1L31_adder_eqn);
+
+--A1L32 is Add0~6 at MLABCELL_X87_Y37_N3
+A1L32_adder_eqn = ( inverted_bits[2] ) + ( GND ) + ( A1L28 );
+A1L32 = CARRY(A1L32_adder_eqn);
+
+
+--A1L35 is Add0~9 at MLABCELL_X87_Y37_N6
+A1L35_adder_eqn = ( inverted_bits[3] ) + ( GND ) + ( A1L32 );
+A1L35 = SUM(A1L35_adder_eqn);
+
+--A1L36 is Add0~10 at MLABCELL_X87_Y37_N6
+A1L36_adder_eqn = ( inverted_bits[3] ) + ( GND ) + ( A1L32 );
+A1L36 = CARRY(A1L36_adder_eqn);
+
+
+--A1L39 is Add0~13 at MLABCELL_X87_Y37_N9
+A1L39_adder_eqn = ( inverted_bits[4] ) + ( GND ) + ( A1L36 );
+A1L39 = SUM(A1L39_adder_eqn);
+
+--A1L40 is Add0~14 at MLABCELL_X87_Y37_N9
+A1L40_adder_eqn = ( inverted_bits[4] ) + ( GND ) + ( A1L36 );
+A1L40 = CARRY(A1L40_adder_eqn);
+
+
+--A1L43 is Add0~17 at MLABCELL_X87_Y37_N12
+A1L43_adder_eqn = ( inverted_bits[5] ) + ( GND ) + ( A1L40 );
+A1L43 = SUM(A1L43_adder_eqn);
+
+--A1L44 is Add0~18 at MLABCELL_X87_Y37_N12
+A1L44_adder_eqn = ( inverted_bits[5] ) + ( GND ) + ( A1L40 );
+A1L44 = CARRY(A1L44_adder_eqn);
+
+
+--A1L47 is Add0~21 at MLABCELL_X87_Y37_N15
+A1L47_adder_eqn = ( inverted_bits[6] ) + ( GND ) + ( A1L44 );
+A1L47 = SUM(A1L47_adder_eqn);
+
+--A1L48 is Add0~22 at MLABCELL_X87_Y37_N15
+A1L48_adder_eqn = ( inverted_bits[6] ) + ( GND ) + ( A1L44 );
+A1L48 = CARRY(A1L48_adder_eqn);
+
+
+--A1L51 is Add0~25 at MLABCELL_X87_Y37_N18
+A1L51_adder_eqn = ( GND ) + ( GND ) + ( A1L48 );
+A1L51 = SUM(A1L51_adder_eqn);
+
+
+--A1L18 is abs_val~0 at MLABCELL_X87_Y37_N33
+A1L18 = (!A1L71 & (A1L57)) # (A1L71 & ((twos_comp[0])));
+
+
+--A1L19 is abs_val~1 at LABCELL_X88_Y37_N0
+A1L19 = ( twos_comp[1] & ( (A1L59) # (A1L71) ) ) # ( !twos_comp[1] & ( (!A1L71 & A1L59) ) );
+
+
+--A1L20 is abs_val~2 at LABCELL_X88_Y37_N39
+A1L20 = ( A1L71 & ( twos_comp[2] ) ) # ( !A1L71 & ( A1L61 ) );
+
+
+--A1L21 is abs_val~3 at LABCELL_X88_Y37_N21
+A1L21 = ( twos_comp[3] & ( (A1L63) # (A1L71) ) ) # ( !twos_comp[3] & ( (!A1L71 & A1L63) ) );
+
+
+--A1L22 is abs_val~4 at LABCELL_X88_Y37_N3
+A1L22 = (!A1L71 & (A1L65)) # (A1L71 & ((twos_comp[4])));
+
+
+--A1L23 is abs_val~5 at LABCELL_X88_Y37_N24
+A1L23 = ( twos_comp[5] & ( A1L67 ) ) # ( !twos_comp[5] & ( A1L67 & ( !A1L71 ) ) ) # ( twos_comp[5] & ( !A1L67 & ( A1L71 ) ) );
+
+
+--A1L24 is abs_val~6 at LABCELL_X88_Y37_N54
+A1L24 = ( twos_comp[6] & ( (A1L69) # (A1L71) ) ) # ( !twos_comp[6] & ( (!A1L71 & A1L69) ) );
+
+
+--A1L25 is abs_val~7 at LABCELL_X88_Y37_N6
+A1L25 = ( twos_comp[7] & ( A1L71 ) );
+
+
+--twos_comp[0] is twos_comp[0] at LABCELL_X88_Y37_N42
+twos_comp[0] = ( A1L71 & ( !inverted_bits[0] ) ) # ( !A1L71 & ( twos_comp[0] ) );
+
+
+--twos_comp[1] is twos_comp[1] at LABCELL_X88_Y37_N51
+twos_comp[1] = ( twos_comp[1] & ( A1L71 & ( A1L27 ) ) ) # ( !twos_comp[1] & ( A1L71 & ( A1L27 ) ) ) # ( twos_comp[1] & ( !A1L71 ) );
+
+
+--twos_comp[2] is twos_comp[2] at MLABCELL_X87_Y37_N39
+twos_comp[2] = ( twos_comp[2] & ( (!A1L71) # (A1L31) ) ) # ( !twos_comp[2] & ( (A1L31 & A1L71) ) );
+
+
+--twos_comp[3] is twos_comp[3] at MLABCELL_X87_Y37_N57
+twos_comp[3] = ( twos_comp[3] & ( A1L35 ) ) # ( !twos_comp[3] & ( A1L35 & ( A1L71 ) ) ) # ( twos_comp[3] & ( !A1L35 & ( !A1L71 ) ) );
+
+
+--twos_comp[4] is twos_comp[4] at MLABCELL_X87_Y37_N48
+twos_comp[4] = ( twos_comp[4] & ( A1L39 ) ) # ( !twos_comp[4] & ( A1L39 & ( A1L71 ) ) ) # ( twos_comp[4] & ( !A1L39 & ( !A1L71 ) ) );
+
+
+--twos_comp[5] is twos_comp[5] at MLABCELL_X87_Y37_N27
+twos_comp[5] = ( A1L43 & ( (twos_comp[5]) # (A1L71) ) ) # ( !A1L43 & ( (!A1L71 & twos_comp[5]) ) );
+
+
+--twos_comp[6] is twos_comp[6] at MLABCELL_X87_Y37_N24
+twos_comp[6] = ( A1L47 & ( (twos_comp[6]) # (A1L71) ) ) # ( !A1L47 & ( (!A1L71 & twos_comp[6]) ) );
+
+
+--twos_comp[7] is twos_comp[7] at MLABCELL_X87_Y37_N45
+twos_comp[7] = ( twos_comp[7] & ( A1L51 ) ) # ( !twos_comp[7] & ( A1L51 & ( A1L71 ) ) ) # ( twos_comp[7] & ( !A1L51 & ( !A1L71 ) ) );
+
+
+--inverted_bits[0] is inverted_bits[0] at MLABCELL_X87_Y37_N30
+inverted_bits[0] = ( inverted_bits[0] & ( (!A1L57) # (!A1L71) ) ) # ( !inverted_bits[0] & ( (!A1L57 & A1L71) ) );
+
+
+--inverted_bits[1] is inverted_bits[1] at MLABCELL_X87_Y37_N36
+inverted_bits[1] = ( inverted_bits[1] & ( (!A1L59) # (!A1L71) ) ) # ( !inverted_bits[1] & ( (!A1L59 & A1L71) ) );
+
+
+--inverted_bits[2] is inverted_bits[2] at LABCELL_X88_Y37_N15
+inverted_bits[2] = ( A1L71 & ( !A1L61 ) ) # ( !A1L71 & ( inverted_bits[2] ) );
+
+
+--inverted_bits[3] is inverted_bits[3] at LABCELL_X88_Y37_N57
+inverted_bits[3] = ( inverted_bits[3] & ( (!A1L71) # (!A1L63) ) ) # ( !inverted_bits[3] & ( (A1L71 & !A1L63) ) );
+
+
+--inverted_bits[4] is inverted_bits[4] at LABCELL_X88_Y37_N18
+inverted_bits[4] = ( inverted_bits[4] & ( (!A1L71) # (!A1L65) ) ) # ( !inverted_bits[4] & ( (A1L71 & !A1L65) ) );
+
+
+--inverted_bits[5] is inverted_bits[5] at LABCELL_X88_Y37_N33
+inverted_bits[5] = ( A1L71 & ( !A1L67 ) ) # ( !A1L71 & ( inverted_bits[5] ) );
+
+
+--inverted_bits[6] is inverted_bits[6] at LABCELL_X88_Y37_N9
+inverted_bits[6] = ( inverted_bits[6] & ( (!A1L71) # (!A1L69) ) ) # ( !inverted_bits[6] & ( (A1L71 & !A1L69) ) );
+
+
+--A1L3 is Abs_num[0]~output at IOOBUF_X89_Y35_N62
+A1L3 = OUTPUT_BUFFER.O(.I(A1L18), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Abs_num[0] is Abs_num[0] at PIN_M16
+Abs_num[0] = OUTPUT();
+
+
+--A1L5 is Abs_num[1]~output at IOOBUF_X89_Y37_N56
+A1L5 = OUTPUT_BUFFER.O(.I(A1L19), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Abs_num[1] is Abs_num[1] at PIN_M21
+Abs_num[1] = OUTPUT();
+
+
+--A1L7 is Abs_num[2]~output at IOOBUF_X89_Y35_N96
+A1L7 = OUTPUT_BUFFER.O(.I(A1L20), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Abs_num[2] is Abs_num[2] at PIN_N21
+Abs_num[2] = OUTPUT();
+
+
+--A1L9 is Abs_num[3]~output at IOOBUF_X89_Y36_N56
+A1L9 = OUTPUT_BUFFER.O(.I(A1L21), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Abs_num[3] is Abs_num[3] at PIN_L22
+Abs_num[3] = OUTPUT();
+
+
+--A1L11 is Abs_num[4]~output at IOOBUF_X89_Y36_N5
+A1L11 = OUTPUT_BUFFER.O(.I(A1L22), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Abs_num[4] is Abs_num[4] at PIN_N19
+Abs_num[4] = OUTPUT();
+
+
+--A1L13 is Abs_num[5]~output at IOOBUF_X89_Y35_N79
+A1L13 = OUTPUT_BUFFER.O(.I(A1L23), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Abs_num[5] is Abs_num[5] at PIN_N20
+Abs_num[5] = OUTPUT();
+
+
+--A1L15 is Abs_num[6]~output at IOOBUF_X89_Y38_N39
+A1L15 = OUTPUT_BUFFER.O(.I(A1L24), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Abs_num[6] is Abs_num[6] at PIN_K21
+Abs_num[6] = OUTPUT();
+
+
+--A1L17 is Abs_num[7]~output at IOOBUF_X89_Y38_N56
+A1L17 = OUTPUT_BUFFER.O(.I(A1L25), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Abs_num[7] is Abs_num[7] at PIN_K22
+Abs_num[7] = OUTPUT();
+
+
+--A1L71 is in_num[7]~input at IOIBUF_X89_Y37_N4
+A1L71 = INPUT_BUFFER(.I(in_num[7]), );
+
+
+--in_num[7] is in_num[7] at PIN_K17
+in_num[7] = INPUT();
+
+
+--A1L57 is in_num[0]~input at IOIBUF_X89_Y36_N38
+A1L57 = INPUT_BUFFER(.I(in_num[0]), );
+
+
+--in_num[0] is in_num[0] at PIN_M22
+in_num[0] = INPUT();
+
+
+--A1L59 is in_num[1]~input at IOIBUF_X89_Y37_N21
+A1L59 = INPUT_BUFFER(.I(in_num[1]), );
+
+
+--in_num[1] is in_num[1] at PIN_L17
+in_num[1] = INPUT();
+
+
+--A1L61 is in_num[2]~input at IOIBUF_X89_Y38_N4
+A1L61 = INPUT_BUFFER(.I(in_num[2]), );
+
+
+--in_num[2] is in_num[2] at PIN_L19
+in_num[2] = INPUT();
+
+
+--A1L63 is in_num[3]~input at IOIBUF_X89_Y37_N38
+A1L63 = INPUT_BUFFER(.I(in_num[3]), );
+
+
+--in_num[3] is in_num[3] at PIN_M20
+in_num[3] = INPUT();
+
+
+--A1L65 is in_num[4]~input at IOIBUF_X89_Y36_N21
+A1L65 = INPUT_BUFFER(.I(in_num[4]), );
+
+
+--in_num[4] is in_num[4] at PIN_M18
+in_num[4] = INPUT();
+
+
+--A1L67 is in_num[5]~input at IOIBUF_X89_Y35_N44
+A1L67 = INPUT_BUFFER(.I(in_num[5]), );
+
+
+--in_num[5] is in_num[5] at PIN_N16
+in_num[5] = INPUT();
+
+
+--A1L69 is in_num[6]~input at IOIBUF_X89_Y38_N21
+A1L69 = INPUT_BUFFER(.I(in_num[6]), );
+
+
+--in_num[6] is in_num[6] at PIN_L18
+in_num[6] = INPUT();
+
+
+
