@@ -1,0 +1,58 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--A1L11 is GT~0 at LABCELL_X53_Y21_N30
+A1L11 = ( A1L2 & ( (!A1L9 & ((!A1L7) # (A1L4))) # (A1L9 & (!A1L7 & A1L4)) ) ) # ( !A1L2 & ( (!A1L9 & A1L4) ) );
+
+
+--A1L12 is GT~output at IOOBUF_X54_Y19_N39
+A1L12 = OUTPUT_BUFFER.O(.I(A1L11), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--GT is GT at PIN_M22
+GT = OUTPUT();
+
+
+--A1L4 is A1~input at IOIBUF_X54_Y21_N38
+A1L4 = INPUT_BUFFER(.I(A1), );
+
+
+--A1 is A1 at PIN_K21
+A1 = INPUT();
+
+
+--A1L9 is B1~input at IOIBUF_X54_Y21_N55
+A1L9 = INPUT_BUFFER(.I(B1), );
+
+
+--B1 is B1 at PIN_K22
+B1 = INPUT();
+
+
+--A1L2 is A0~input at IOIBUF_X54_Y21_N4
+A1L2 = INPUT_BUFFER(.I(A0), );
+
+
+--A0 is A0 at PIN_L19
+A0 = INPUT();
+
+
+--A1L7 is B0~input at IOIBUF_X54_Y21_N21
+A1L7 = INPUT_BUFFER(.I(B0), );
+
+
+--B0 is B0 at PIN_L18
+B0 = INPUT();
+
+
+

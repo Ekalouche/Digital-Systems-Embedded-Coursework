@@ -1,0 +1,154 @@
+#include "msp.h"
+#include <msp432.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "../inc/Clock.h"
+#include "../inc/CortexM.h"
+#include "../inc/Init_Ports.h"
+#include "../inc/Init_Timers.h"
+
+void Servo(uint16_t angle_count);
+void ServoInit(void);
+
+// -------------------------------------------------------
+// UART Init — EUSCI_A0, 9600 baud, 48MHz clock
+// P1.2 = RX, P1.3 = TX
+// -------------------------------------------------------
+void UART_Init(void)
+{
+    // Configure P1.2 RX and P1.3 TX for UART
+    P1SEL0 |=  (BIT2 | BIT3);
+    P1SEL1 &= ~(BIT2 | BIT3);
+
+    EUSCI_A0->CTLW0 |= EUSCI_A_CTLW0_SWRST;   // put UART in reset
+    EUSCI_A0->CTLW0  = EUSCI_A_CTLW0_SWRST |
+                        EUSCI_A_CTLW0_SSEL__SMCLK; // SMCLK source
+    // 9600 baud from 48MHz: UCBRx = 312, UCBRFx = 8, UCBRSx = 0
+    EUSCI_A0->BRW    = 312;
+    EUSCI_A0->MCTLW  = (8 << EUSCI_A_MCTLW_BRF_OFS) |
+                        EUSCI_A_MCTLW_OS16;
+    EUSCI_A0->CTLW0 &= ~EUSCI_A_CTLW0_SWRST;  // release reset
+}
+
+// -------------------------------------------------------
+// Send one character to PuTTY
+// -------------------------------------------------------
+void UART_SendChar(char c)
+{
+    while(!(EUSCI_A0->IFG & EUSCI_A_IFG_TXIFG)); // wait for TX ready
+    EUSCI_A0->TXBUF = c;
+}
+
+// -------------------------------------------------------
+// Send a string to PuTTY
+// -------------------------------------------------------
+void UART_SendString(char *str)
+{
+    while(*str)
+    {
+        UART_SendChar(*str++);
+    }
+}
+
+// -------------------------------------------------------
+// Read one character from PuTTY
+// -------------------------------------------------------
+char UART_ReadChar(void)
+{
+    while(!(EUSCI_A0->IFG & EUSCI_A_IFG_RXIFG)); // wait for RX data
+    return EUSCI_A0->RXBUF;
+}
+
+// -------------------------------------------------------
+// Read a number typed in PuTTY (ends on Enter key)
+// -------------------------------------------------------
+uint16_t UART_ReadNumber(void)
+{
+    uint16_t value = 0;
+    char c;
+
+    while(1)
+    {
+        c = UART_ReadChar();
+
+        if(c == '\r' || c == '\n')  // Enter pressed
+        {
+            UART_SendString("\r\n");
+            break;
+        }
+        else if(c >= '0' && c <= '9')  // valid digit
+        {
+            value = value * 10 + (c - '0');
+            UART_SendChar(c);  // echo character back to PuTTY
+        }
+    }
+    return value;
+}
+
+// -------------------------------------------------------
+// ServoInit
+// -------------------------------------------------------
+void ServoInit(void)
+{
+    Servo(9000);
+    Clock_Delay1ms(1000);
+    return;
+}
+
+// -------------------------------------------------------
+// Servo
+// Valid range at 6MHz:
+//   6000  = 1.0ms = full left
+//   9000  = 1.5ms = center
+//   12000 = 2.0ms = full right
+// -------------------------------------------------------
+void Servo(uint16_t angle_count)
+{
+    TA3CCR0 = 119999;
+    TA3CCR3 = angle_count;
+    TA3CTL  = (TA3CTL & ~0x0030) | 0x0010;
+    return;
+}
+
+// -------------------------------------------------------
+// Main
+// -------------------------------------------------------
+void main(void)
+{
+    uint16_t count;
+
+    WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;   // stop watchdog
+    Clock_Init48MHz();                               // 48MHz clock
+    Port9_Init();                                    // PWM pin
+    TimerA3_Init();                                  // Timer A3
+    UART_Init();                                     // UART for PuTTY
+
+    ServoInit();                                     // center servo
+
+    UART_SendString("Servo Control Ready\r\n");
+    UART_SendString("Enter count (6000-12000) and press Enter:\r\n");
+
+    while(1)
+    {
+        UART_SendString("\r\nEnter count: ");
+        count = UART_ReadNumber();
+
+        // clamp to valid range
+        if(count < 6000)
+        {
+            count = 6000;
+            UART_SendString("Too low! Clamped to 6000\r\n");
+        }
+        else if(count > 12000)
+        {
+            count = 12000;
+            UART_SendString("Too high! Clamped to 12000\r\n");
+        }
+        else
+        {
+            UART_SendString("Moving servo...\r\n");
+        }
+
+        Servo(count);
+    }
+}

@@ -1,0 +1,45 @@
+#include "msp.h"
+
+
+#include "msp.h"
+#include <msp432.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "../inc/Clock.h"
+#include "../inc/CortexM.h"
+#include "../inc/Init_Ports.h"
+#include "../inc/Init_Timers.h"
+
+void Servo(uint16_t angle_count);
+
+void ServoInit(void)
+{
+    Servo(9000);
+    Clock_Delay1ms(1000);
+    return;
+}
+
+void Servo(uint16_t angle_count)
+{
+    TA3CCR0 = 119999;
+    TA3CCR3 = angle_count;
+    TA3CTL  = (TA3CTL & ~0x0030) | 0x0010;
+    //TA3CTL |= 0x0010; //set timer for up mode
+    return;
+}
+
+void main(void)
+{
+    WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;     // stop watchdog timer
+
+        Clock_Init48MHz();  // makes bus clock 48 MHz
+        //call all the port initialization functions
+         Port9_Init();
+        //call all the timer initialization functions
+         TimerA3_Init();
+
+        //center the servo using the ServoInit() function
+         ServoInit();
+         Servo(2400);
+         Clock_Delay1ms(2000);
+}
